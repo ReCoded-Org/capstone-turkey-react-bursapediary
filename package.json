@@ -47,5 +47,8 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "husky": "^7.0.0",
     "prettier": "^2.6.0"
+  },
+  "optionalDependencies": {
+    "fsevents": "^2.3.2"
   }
 }
