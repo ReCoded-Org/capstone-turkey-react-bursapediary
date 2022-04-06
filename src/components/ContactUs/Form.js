@@ -6,7 +6,7 @@ function Form() {
       initialValues={{
         name: '',
         email: '',
-        message: ''
+        message: '',
       }}
       validate={(values) => {
         const errors = {};
@@ -50,7 +50,7 @@ function Form() {
               <input
                 type="text"
                 name="name"
-                id="exampleInput7"
+                id="name"
                 onChange={handleChange}
                 onBlur={handleBlur}
                 value={values.name}
@@ -78,7 +78,7 @@ function Form() {
               <input
                 type="email"
                 name="email"
-                id="exampleInput8"
+                id="email"
                 onChange={handleChange}
                 onBlur={handleBlur}
                 value={values.email}
@@ -105,7 +105,7 @@ function Form() {
             <div className="form-group mb-6">
               <textarea
                 name="message"
-                id="exampleFormControlTextarea13"
+                id="message"
                 onChange={handleChange}
                 onBlur={handleBlur}
                 value={values.message}
