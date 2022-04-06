@@ -1,6 +1,30 @@
 import { Formik } from 'formik';
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 function Form() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        'service_qozhrg7',
+        'emplate_akxu7oa',
+        form.current,
+        'B2JkePBOzV_nhSmeO',
+      )
+      .then(
+        (result) => {
+          alert(result.text);
+        },
+        (error) => {
+          alert(error.text);
+        },
+      );
+  };
+
   return (
     <Formik
       initialValues={{
@@ -40,12 +64,16 @@ function Form() {
         touched,
         handleChange,
         handleBlur,
-        handleSubmit,
+        // handleSubmit,
         isSubmitting,
         /* and other goodies */
       }) => (
         <div className="flex justify-center p-6 w-3/4 rounded-lg bg-main text-center lg:text-center min-w-min items-center">
-          <form onSubmit={handleSubmit} className="w-full lg:text-center">
+          <form
+            ref={form}
+            onSubmit={sendEmail}
+            className="w-full lg:text-center"
+          >
             <div className="form-group mb-6">
               <input
                 type="text"

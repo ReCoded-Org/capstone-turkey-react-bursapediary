@@ -3,7 +3,7 @@ import Form from '../components/ContactUs/Form';
 import Address from '../components/ContactUs/Address';
 import Map from '../components/ContactUs/Map';
 
-function ContactUsPage() {
+function ContactUs() {
   return (
     <div className="bg-main h-100 mb-16">
       <Header />
@@ -28,4 +28,4 @@ function ContactUsPage() {
   );
 }
 
-export default ContactUsPage;
+export default ContactUs;

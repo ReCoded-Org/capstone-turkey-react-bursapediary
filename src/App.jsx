@@ -1,7 +1,7 @@
-import ContactUsPage from './pages/ContactUsPage';
+import ContactUs from './pages/ContactUs';
 
 function App() {
-  return <ContactUsPage />;
+  return <ContactUs />;
 }
 
 export default App;
