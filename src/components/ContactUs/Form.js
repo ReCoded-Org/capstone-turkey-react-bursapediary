@@ -3,21 +3,26 @@ import { Formik } from 'formik';
 function Form() {
   return (
     <Formik
-      initialValues={{ name: '', email: '', message: '' }}
+      initialValues={{
+        name: '',
+        email: '',
+        message: ''
+      }}
       validate={(values) => {
         const errors = {};
         if (!values.name) {
           errors.name = '*Required!';
         }
         if (!values.email) {
-          errors.email = 'Required!';
+          errors.email = '*Required!';
         } else if (
           !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
         ) {
-          errors.email = '*Invalid email address!';
+          errors.email =
+            '*Invalid email address! Please enter your email adress in format: yourname@example.com';
         }
         if (!values.message) {
-          errors.message = '*Required';
+          errors.message = '*Required!';
         }
         return errors;
       }}
