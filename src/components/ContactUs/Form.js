@@ -11,7 +11,7 @@ function Form() {
     emailjs
       .sendForm(
         'service_qozhrg7',
-        'emplate_akxu7oa',
+        'template_akxu7oa',
         form.current,
         'B2JkePBOzV_nhSmeO',
       )
@@ -52,7 +52,6 @@ function Form() {
       }}
       onSubmit={(values, { setSubmitting }) => {
         setTimeout(() => {
-          // eslint-disable-next-line no-alert
           alert(JSON.stringify(values, null, 2));
           setSubmitting(false);
         }, 400);
@@ -64,9 +63,7 @@ function Form() {
         touched,
         handleChange,
         handleBlur,
-        // handleSubmit,
         isSubmitting,
-        /* and other goodies */
       }) => (
         <div className="flex justify-center p-6 w-3/4 rounded-lg bg-main text-center lg:text-center min-w-min items-center">
           <form
@@ -75,6 +72,7 @@ function Form() {
             className="w-full lg:text-center"
           >
             <div className="form-group mb-6">
+              <span className="flex justify-start mb-2">Name:</span>
               <input
                 type="text"
                 name="name"
@@ -103,6 +101,7 @@ function Form() {
               )}
             </div>
             <div className="form-group mb-6">
+              <span className="flex justify-start mb-2">Email:</span>
               <input
                 type="email"
                 name="email"
@@ -131,6 +130,7 @@ function Form() {
               )}
             </div>
             <div className="form-group mb-6">
+              <span className="flex justify-start mb-2">Message:</span>
               <textarea
                 name="message"
                 id="message"

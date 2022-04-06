@@ -2,6 +2,7 @@ import Header from '../components/ContactUs/Header';
 import Form from '../components/ContactUs/Form';
 import Address from '../components/ContactUs/Address';
 import Map from '../components/ContactUs/Map';
+import { ReactComponent as Image } from '../images/contact.svg';
 
 function ContactUs() {
   return (
@@ -12,12 +13,8 @@ function ContactUs() {
           <Form />
         </div>
 
-        <div className="flex justify-center ~:justify-center">
-          <img
-            src="https://i.ibb.co/PD5s3qJ/My-project.png"
-            className="p-1 w-1/2"
-            alt="contact-img"
-          />
+        <div className="flex justify-center">
+          <Image className="p-1 w-3/4" alt="contact-img" />
         </div>
 
         <Map />
