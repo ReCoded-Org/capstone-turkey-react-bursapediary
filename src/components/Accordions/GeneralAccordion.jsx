@@ -1,6 +1,6 @@
 function GeneralAccordion() {
   return (
-    <div className="accordion w-1/2 text-left mt-10" id="accordionExample">
+    <div className="accordion w-2/3 text-left mt-10" id="accordionExample">
       <div className="flex flex-row justify-start align-center">
         <div className="p-2">
           <svg

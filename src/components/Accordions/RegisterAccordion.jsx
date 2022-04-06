@@ -1,6 +1,6 @@
 function RegisterAccordion() {
   return (
-    <div className="accordion w-1/2 text-left my-10" id="accordionExample3">
+    <div className="accordion w-2/3 text-left my-10" id="accordionExample3">
       <div className="flex flex-row justify-start align-center ">
         <div className="p-2">
           <svg
