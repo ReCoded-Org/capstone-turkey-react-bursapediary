@@ -12,7 +12,7 @@ function ContactUsPage() {
           <Form />
         </div>
 
-        <div className="flex justify-center md:justify-center">
+        <div className="flex justify-center ~:justify-center">
           <img
             src="https://i.ibb.co/PD5s3qJ/My-project.png"
             className="p-1 w-1/2"

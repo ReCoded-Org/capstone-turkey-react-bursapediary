@@ -22,7 +22,7 @@ function Map() {
           width: '34vw',
         }}
       >
-        <Marker coordinates={[21.015137, 38.97953]} anchor="bottom">
+        <Marker coordinates={[38.97953, 21.015137]} anchor="bottom">
           <img
             src="https://media.istockphoto.com/vectors/red-pinpoint-symbol-vector-id1272693590"
             alt="marker"
