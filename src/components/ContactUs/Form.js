@@ -1,6 +1,7 @@
 import { Formik } from 'formik';
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import Notification from './Notification';
 
 function Form() {
   const form = useRef();
@@ -17,10 +18,12 @@ function Form() {
       )
       .then(
         (result) => {
-          alert(result.text);
+          <Notification data={result} />;
+          // eslint-disable-next-line no-console
+          console.log('notification is sent!');
         },
         (error) => {
-          alert(error.text);
+          <Notification data={error} />;
         },
       );
   };
@@ -52,7 +55,6 @@ function Form() {
       }}
       onSubmit={(values, { setSubmitting }) => {
         setTimeout(() => {
-          alert(JSON.stringify(values, null, 2));
           setSubmitting(false);
         }, 400);
       }}
