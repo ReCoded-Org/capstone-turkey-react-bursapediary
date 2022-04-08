@@ -4,7 +4,7 @@ import {
   AiFillGithub,
 } from 'react-icons/ai';
 import { IoLogoDiscord } from 'react-icons/io5';
-import SignInForm from './SignInForm';
+import SignUpForm from '../components/SignUp/SignUpForm';
 
 function SignIn() {
   return (
@@ -56,12 +56,12 @@ function SignIn() {
           </div>
         </div>
         <div className="col-span-3">
-          <div className="flex flex-col items-center justify-center h-screen mx-auto pb-10">
+          <div className="flex flex-col items-center justify-center h-screen mx-auto pb-12">
             <div className="w-full max-w-xs">
-              <h1 className="text-[#6A2C70] text-4xl font-semibold mb-16 text-center sm:text-left">
-                Login
+              <h1 className="text-[#6A2C70] text-4xl font-semibold mb-16 text-center pb-8 pt-12 ">
+                Create Account
               </h1>
-              <SignInForm />
+              <SignUpForm />
             </div>
           </div>
         </div>
