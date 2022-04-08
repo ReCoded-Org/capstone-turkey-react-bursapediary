@@ -6,5 +6,6 @@ module.exports = {
   theme: {
     extend: {},
   },
+  // eslint-disable-next-line global-require
   plugins: [require('tw-elements/dist/plugin')],
 };
