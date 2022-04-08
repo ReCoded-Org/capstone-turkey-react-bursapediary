@@ -3,9 +3,10 @@ import {
   Transation,
   FeaturedProjects,
   ProjectCard,
+  Slider,
 } from '../components';
 import { TRANSATION_MAIN_TEXT, TRANSATION_SUB_TEXT } from '../constants/index';
-import { MOCKED_PROJECTS } from '../data/index';
+import { MOCKED_PROJECTS, MOCKED_REVIEWS } from '../data/index';
 
 function Home() {
   return (
@@ -15,6 +16,7 @@ function Home() {
         mainText={TRANSATION_MAIN_TEXT}
         subText={TRANSATION_SUB_TEXT}
       />
+      {/* composition */}
       <FeaturedProjects>
         {MOCKED_PROJECTS.map((project) => (
           <ProjectCard
@@ -25,6 +27,7 @@ function Home() {
           />
         ))}
       </FeaturedProjects>
+      <Slider items={MOCKED_REVIEWS} />
     </div>
   );
 }
