@@ -1,4 +1,4 @@
-import { Formik } from 'formik';
+import { Formik, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
 function SignInForm() {
@@ -7,9 +7,9 @@ function SignInForm() {
       initialValues={{ email: '', password: '' }}
       validationSchema={Yup.object().shape({
         email: Yup.string()
-          .email('Email is invalid')
-          .required('Email is required'),
-        password: Yup.string().required('Password is required'),
+          .email('*Email is invalid')
+          .required('*Email is required'),
+        password: Yup.string().required('*Password is required'),
       })}
       onSubmit={(values, { setSubmitting }) => {
         setTimeout(() => {
@@ -18,15 +18,7 @@ function SignInForm() {
         }, 400);
       }}
     >
-      {({
-        values,
-        touched,
-        errors,
-        isSubmitting,
-        handleChange,
-        handleBlur,
-        handleSubmit,
-      }) => {
+      {({ values, isSubmitting, handleChange, handleBlur, handleSubmit }) => {
         return (
           <form onSubmit={handleSubmit}>
             <div className="mb-8">
@@ -36,48 +28,40 @@ function SignInForm() {
               >
                 Email
                 <input
-                  className="border-1 shadow appearance-none border rounded w-full py-2 px-3  text-gray-700 outline outline-1 focus:shadow-outline"
+                  className="leading-tight border-1 shadow appearance-none border rounded w-full py-2 px-3  text-gray-700 outline outline-1 focus:shadow-outline"
                   id="email"
                   type="email"
                   value={values.email}
                   onChange={handleChange}
                   onBlur={handleBlur}
                 />
+                <ErrorMessage
+                  name="email"
+                  component="div"
+                  className="text-red-500 text-xs italic absolute"
+                />
               </label>
-              {errors.email && touched.email && (
-                <div className="text-red-500 text-xs italic">
-                  {errors.email}
-                </div>
-              )}
             </div>
-            <div className="mb-1">
+            <div className="mb-1 pb-4">
               <label
-                className="block text-[#6A2C70] text-md font-bold mb-1"
+                className="block text-[#6A2C70] text-md font-bold mb-4"
                 htmlFor="password"
               >
                 Password
                 <input
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 outline outline-1  focus:shadow-outline"
+                  className="leading-tight shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 outline outline-1  focus:shadow-outline"
                   id="password"
                   type="password"
                   value={values.password}
                   onChange={handleChange}
                   onBlur={handleBlur}
                 />
+                <ErrorMessage
+                  name="password"
+                  component="div"
+                  className="text-red-500 text-xs italic absolute"
+                />
               </label>
-              {errors.password && touched.password && (
-                <div className="text-red-500 text-xs italic">
-                  {errors.password}
-                </div>
-              )}
-            </div>
-            <div className="mb-8">
-              <a
-                className="inline-block align-baseline text-sm hover:text-blue-800"
-                href="a.html"
-              >
-                Forgot your Password?
-              </a>
             </div>
             <div className="mb-2 flex justify-center sm:block">
               <button

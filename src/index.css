@@ -2,11 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @layer utilities {
-
-    .rectengle {
- 
-        clip-path: polygon(0 0, 100% 0, 82% 100%, 0% 100%);
- 
-    }
- 
- }
+  .rectangle {
+    clip-path: polygon(0 0, 100% 0, 82% 100%, 0% 100%);
+  }
+}
