@@ -31,16 +31,23 @@ export default function Slider({ items }) {
   }, [handleOnClick]);
 
   return (
-    <div ref={slideRef} className="w-full h-70v  relative  bg-secondary">
-      <div className="flex flex-col tracking-wider py-20 px-40 items-center text-primary w-full h-full text-center ">
-        <p className="text-2xl font-bold ">What Our Clients Say</p>
-        <p className="flex text-2xl font-semibold my-20 justify-self-center w-1/3 leading-8">
+    <div
+      ref={slideRef}
+      className="w-full h-40v lg:h-70v md:h-60v sm:h-50v relative  bg-secondary"
+    >
+      <div className="flex flex-col tracking-wider lg:py-20 md:py-10 sm:py-8 lg:px-40 md:px-20 sm:px-10 items-center text-primary w-full h-full text-center justify-center ">
+        <p className=" text-xl lg:text-2xl md:text-xl sm:text-xl font-bold ">
+          What Our Clients Say
+        </p>
+        <p className="flex text-sm lg:text-2xl md:text-xl sm:text-base font-semibold my-8 lg:my-20 md:my-10 sm:my-8 justify-self-center w-1/3 sm:leading-8 leading-4 ">
           {items[currentIndex].review}
         </p>
-        <p className="text-xl font-bold">{items[currentIndex].clientName}</p>
+        <p className="text-base lg:text-xl md:text-base sm:text-base font-bold">
+          {items[currentIndex].clientName}
+        </p>
       </div>
       <button
-        className="absolute top-1/2 left-1/4 text-primary cursor-pointer transition "
+        className="absolute top-1/2 left-1/4  text-primary cursor-pointer transition "
         onClick={() => handleOnClick('left')}
         type="submit"
       >
