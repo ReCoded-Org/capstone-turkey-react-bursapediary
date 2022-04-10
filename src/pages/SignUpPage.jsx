@@ -4,6 +4,7 @@ import {
   AiFillGithub,
 } from 'react-icons/ai';
 import { IoLogoDiscord } from 'react-icons/io5';
+
 import SignUpForm from '../components/SignUp/SignUpForm';
 
 function SignIn() {
