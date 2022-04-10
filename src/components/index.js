@@ -1,7 +1,7 @@
-import Header from './Header';
-import Transation from './Transation';
-import FeaturedProjects from './FeaturedProjects';
-import ProjectCard from './ProjectCard';
-import Slider from './Slider';
+import Header from './Header/Header';
+import Transation from './Transation/Transation';
+import FeaturedProjects from './FeaturedProjects/FeaturedProjects';
+import ProjectCard from './ProjectCard/ProjectCard';
+import Slider from './Slider/Slider';
 
 export { Header, Transation, FeaturedProjects, ProjectCard, Slider };

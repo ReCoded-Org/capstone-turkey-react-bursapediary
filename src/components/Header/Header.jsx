@@ -1,5 +1,5 @@
-import mainHero from '../assets/images/main-hero.svg';
-import { HOME_PAGE_TITLE, HOME_INFORMATION_TEXT } from '../constants/index';
+import mainHero from '../../assets/images/main-hero.svg';
+import { HOME_PAGE_TITLE, HOME_INFORMATION_TEXT } from '../../constants/index';
 
 function Information() {
   return (
