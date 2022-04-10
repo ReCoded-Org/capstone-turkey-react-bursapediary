@@ -5,7 +5,7 @@ import {
 } from 'react-icons/ai';
 import { IoLogoDiscord } from 'react-icons/io5';
 
-import SignUpForm from '../components/SignUp/SignUpForm';
+import SignUpForm from '../components/SignUpForm/SignUpForm';
 
 function SignIn() {
   return (
