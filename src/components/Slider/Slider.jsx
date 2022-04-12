@@ -7,7 +7,7 @@ export default function Slider({ items }) {
 
   const slideRef = useRef();
 
-  // fucntion calculate the right index and sets it
+  // Function that calculates and sets the right index
   const handleOnClick = useCallback(
     (direction) => {
       if (direction === 'left') {
@@ -65,5 +65,5 @@ export default function Slider({ items }) {
 }
 
 Slider.propTypes = {
-  items: PropTypes.string.isRequired,
+  items: PropTypes.instanceOf(Array).isRequired,
 };

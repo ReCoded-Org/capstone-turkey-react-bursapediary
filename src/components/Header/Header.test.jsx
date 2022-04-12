@@ -1,6 +1,10 @@
 import { render, cleanup } from '@testing-library/react';
+
 import Header from './Header';
-import { HOME_PAGE_TITLE, HOME_INFORMATION_TEXT } from '../../constants/index';
+import {
+  HOME_PAGE_TITLE,
+  HOME_INFORMATION_TEXT,
+} from '../../pages/Home/constants';
 
 describe('Header', () => {
   afterEach(() => cleanup());
@@ -13,7 +17,7 @@ describe('Header', () => {
   test('Header Page Title should have the primary color', () => {
     const { getByText } = render(<Header />);
     const headerPageTitle = getByText(HOME_PAGE_TITLE);
-    expect(headerPageTitle).toHaveStyle(`color: rgb(106,44,112,1)`);
+    expect(headerPageTitle).toHaveStyle('color: rgb(106,44,112,1)');
   });
 
   test('should render Header Information Text', () => {

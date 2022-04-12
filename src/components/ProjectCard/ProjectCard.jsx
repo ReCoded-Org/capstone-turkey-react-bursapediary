@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+
 import featuredProjectImg from '../../assets/images/featuredProjectImg.png';
 
 function ProjectCard({ title, image, description }) {

@@ -4,9 +4,9 @@ import {
   FeaturedProjects,
   ProjectCard,
   Slider,
-} from '../components';
-import { TRANSATION_MAIN_TEXT, TRANSATION_SUB_TEXT } from '../constants/index';
-import { MOCKED_PROJECTS, MOCKED_REVIEWS } from '../data/index';
+} from './components';
+import { TRANSATION_MAIN_TEXT, TRANSATION_SUB_TEXT } from './constants';
+import { MOCKED_PROJECTS, MOCKED_REVIEWS } from './data/index';
 
 function Home() {
   return (

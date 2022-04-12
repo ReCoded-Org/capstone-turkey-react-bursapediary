@@ -1,4 +1,5 @@
 import { render, cleanup } from '@testing-library/react';
+
 import Transation from './Transation';
 
 describe('Transation', () => {
@@ -30,7 +31,7 @@ describe('Transation', () => {
       <Transation mainText={MAIN_TEXT} subText={SUB_TEXT} />,
     );
     const Container = getByTestId('transation-container');
-    expect(Container).toHaveStyle(`background-color: rgb(106,44,112,1)`);
+    expect(Container).toHaveStyle('background-color: rgb(106,44,112,1)');
   });
 
   test('should have white text color', () => {
@@ -38,6 +39,6 @@ describe('Transation', () => {
       <Transation mainText={MAIN_TEXT} subText={SUB_TEXT} />,
     );
     const Container = getByTestId('transation-container');
-    expect(Container).toHaveStyle(`color: rgb(255,255,255,1)`);
+    expect(Container).toHaveStyle('color: rgb(255,255,255,1)');
   });
 });

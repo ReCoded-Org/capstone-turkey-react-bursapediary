@@ -1,4 +1,4 @@
-import FeaturedProjectImg from '../assets/images/featuredProjectImg.png';
+import FeaturedProjectImg from '../../../assets/images/featuredProjectImg.png';
 
 const MOCKED_PROJECTS = [
   {
