@@ -4,9 +4,12 @@ import featuredProjectImg from '../../assets/images/featuredProjectImg.png';
 
 function ProjectCard({ title, image, description }) {
   return (
-    <div className="flex flex-col justify-center items-center sm:max-w-sm bg-secondary text-black rounded-lg sm:p-10 p-4">
+    <div
+      className="flex flex-col justify-center items-center sm:max-w-sm bg-secondary text-black rounded-lg sm:p-10 p-4"
+      data-testid="project-card"
+    >
       <a href="#projectdetail">
-        <img className="mb-6 w-full" src={image} alt="" />
+        <img className="mb-6 w-full" src={image} alt="Project Cover" />
       </a>
       <a href="#projectdetail">
         <h3 className="text-2xl font-light">{title}</h3>
