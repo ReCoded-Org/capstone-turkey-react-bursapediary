@@ -9,7 +9,10 @@ import {
 function Footer() {
   return (
     <div>
-      <footer className="text-center lg:text-left bg-[#6A2C70]">
+      <footer
+        className="text-center lg:text-left bg-[#6A2C70]"
+        data-testid="valid-footer"
+      >
         <div className="mx-6 pt-5 text-center md:text-left">
           <div className="grid grid-1 md:grid-cols-3 lg:grid-cols-3 gap-12">
             <div className="">
