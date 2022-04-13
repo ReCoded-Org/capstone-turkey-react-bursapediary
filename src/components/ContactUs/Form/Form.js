@@ -10,22 +10,14 @@ function Form() {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        'service_qozhrg7',
-        'template_akxu7oa',
-        form.current,
-        'B2JkePBOzV_nhSmeO',
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        },
-      );
-    toast.success('🦄Your messsage has been sent successfully!', {
+    emailjs.sendForm(
+      'service_qozhrg7',
+      'template_akxu7oa',
+      form.current,
+      'B2JkePBOzV_nhSmeO',
+    );
+
+    toast.success('Your messsage has been sent successfully!', {
       position: 'top-right',
       autoClose: 5000,
       hideProgressBar: false,
