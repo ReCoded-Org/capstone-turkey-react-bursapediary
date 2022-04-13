@@ -63,7 +63,7 @@ function Navbar() {
                   <img
                     src="https://user-images.githubusercontent.com/60944453/162048684-bbbe43f3-cd5b-4e93-908f-825ac7166ed1.PNG"
                     alt="Logo"
-                    className="w-14 sm:top-3 sm:right-3 sm:fixed xs:top-3 xs:right-3 xs:fixed"
+                    className="w-14 sm:top-4 sm:right-4 sm:fixed sm:w-11 xs:top-4 xs:right-4 xs:w-10 xs:fixed"
                   />
                 </a>
               </li>
