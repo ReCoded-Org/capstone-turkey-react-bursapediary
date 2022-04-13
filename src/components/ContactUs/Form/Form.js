@@ -1,6 +1,8 @@
 import { Formik } from 'formik';
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Form() {
   const form = useRef();
@@ -17,12 +19,21 @@ function Form() {
       )
       .then(
         (result) => {
-          alert(result.text);
+          console.log(result.text);
         },
         (error) => {
-          alert(error.text);
+          console.log(error.text);
         },
       );
+    toast.success('🦄Your messsage has been sent successfully!', {
+      position: 'top-right',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
   };
 
   return (
@@ -52,7 +63,6 @@ function Form() {
       }}
       onSubmit={(values, { setSubmitting }) => {
         setTimeout(() => {
-          alert(JSON.stringify(values, null, 2));
           setSubmitting(false);
         }, 400);
       }}
@@ -70,6 +80,7 @@ function Form() {
             ref={form}
             onSubmit={sendEmail}
             className="w-full lg:text-center"
+            data-testid="valid-form"
           >
             <div className="form-group mb-6">
               <span className="flex justify-start mb-2">Name:</span>
@@ -180,6 +191,7 @@ function Form() {
               SEND
             </button>
           </form>
+          <ToastContainer />
         </div>
       )}
     </Formik>

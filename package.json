@@ -5,8 +5,7 @@
   "dependencies": {
     "@emailjs/browser": "^3.5.0",
     "@reduxjs/toolkit": "^1.5.1",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
+    "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.1.2",
     "formik": "^2.2.9",
     "mapbox-gl": "^1.13.2",
@@ -15,7 +14,8 @@
     "react-mapbox-gl": "^5.1.1",
     "react-redux": "^7.2.3",
     "react-router-dom": "^6.3.0",
-    "react-scripts": "5.0.0"
+    "react-scripts": "5.0.0",
+    "react-toastify": "^8.2.0"
   },
   "scripts": {
     "start": "react-scripts start && npm run watch:css",
@@ -43,6 +43,7 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.4",
     "autoprefixer": "^10.4.4",
     "eslint": "^8.11.0",
     "eslint-config-airbnb": "^19.0.4",

@@ -28,7 +28,6 @@
         "react/jsx-props-no-spreading":["warn"],
         "no-param-reassign":["off"],
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-        "testing-library/prefer-screen-queries":["off"],
-        "no-alert":"off"
+        "testing-library/prefer-screen-queries":["off"]
     }
 }

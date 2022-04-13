@@ -1,7 +1,7 @@
-import Header from '../components/ContactUs/Header';
-import Form from '../components/ContactUs/Form';
-import Address from '../components/ContactUs/Address';
-import Map from '../components/ContactUs/Map';
+import Header from '../components/ContactUs/Header/Header';
+import Form from '../components/ContactUs/Form/Form';
+import Address from '../components/ContactUs/Address/Address';
+import Map from '../components/ContactUs/Map/Map';
 import { ReactComponent as Image } from '../images/contact.svg';
 
 function ContactUs() {

@@ -13,7 +13,10 @@ function Map() {
   });
 
   return (
-    <div className="flex text-center lg:text-center items-center justify-center">
+    <div
+      className="flex text-center lg:text-center items-center justify-center"
+      data-testid="valid-map"
+    >
       <MapDetail
         // eslint-disable-next-line react/style-prop-object
         style="mapbox://styles/mapbox/streets-v9"
