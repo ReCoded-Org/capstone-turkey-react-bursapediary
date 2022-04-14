@@ -1,6 +1,10 @@
 function GeneralAccordion() {
   return (
-    <div className="accordion w-2/3 text-left mt-10" id="accordionExample">
+    <div
+      className="accordion w-2/3 text-left mt-10"
+      id="accordionExample"
+      data-testid="valid-generalAccordion"
+    >
       <div className="flex flex-row justify-start align-center">
         <div className="p-2">
           <svg
@@ -16,7 +20,12 @@ function GeneralAccordion() {
             />
           </svg>
         </div>
-        <p className="text-2xl font-semibold p-2">General</p>
+        <p
+          className="text-2xl font-semibold p-2"
+          data-testid="valid-generalAccordionTitle"
+        >
+          General
+        </p>
       </div>
       <div className="accordion-item bg-[#FEEEEE] border border-gray-200">
         <h2 className="accordion-header mb-0" id="headingOne">

@@ -4,7 +4,7 @@ import TechnicalAccordion from '../components/Accordions/TechnicalAccordion';
 
 function FaqPage() {
   return (
-    <div>
+    <div data-testid="valid-page">
       <div className="flex flex-col items-center justify-center text-center first-letter:gap-4 p-3">
         <p className="font-semibold text-2xl mb-5 text-[#6A2C70]">FAQ</p>
         <p className="font-semibold text-4xl mb-5">
@@ -36,12 +36,17 @@ function FaqPage() {
             placeholder="Search"
             className="min-w-min w-full px-3 py-0.5 text-base font-normal first-line:text-gray-700 bg-[#FEEEEE] rounded-full transition ease-in-out m-0 focus:text-gray-700 focus:bg-[#FEEEEE] focus:outline-none placeholder:italic"
             aria-label="Search"
+            data-testid="valid-input"
           />
         </div>
-
-        <GeneralAccordion />
-        <TechnicalAccordion />
-        <RegisterAccordion />
+        <div
+          className="flex flex-col items-center justify-center text-center first-letter:gap-4 p-3"
+          data-testid="valid-accordions"
+        >
+          <GeneralAccordion />
+          <TechnicalAccordion />
+          <RegisterAccordion />
+        </div>
       </div>
     </div>
   );

@@ -1,6 +1,10 @@
 function RegisterAccordion() {
   return (
-    <div className="accordion w-2/3 text-left my-10" id="accordionExample3">
+    <div
+      className="accordion w-2/3 text-left my-10"
+      id="accordionExample3"
+      data-testid="valid-registerAccordion"
+    >
       <div className="flex flex-row justify-start align-center ">
         <div className="p-2">
           <svg
@@ -16,7 +20,12 @@ function RegisterAccordion() {
             />
           </svg>
         </div>
-        <p className="text-2xl font-semibold p-2">Register</p>
+        <p
+          className="text-2xl font-semibold p-2"
+          data-testid="valid-registerAccordionTitle"
+        >
+          Register
+        </p>
       </div>
 
       <div className="accordion-item bg-[#FEEEEE] border border-gray-200">

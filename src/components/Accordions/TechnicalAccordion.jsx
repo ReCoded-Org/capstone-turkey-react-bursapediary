@@ -1,6 +1,10 @@
 function TechnicalAccordion() {
   return (
-    <div className="accordion w-2/3 text-left mt-10" id="accordionExample2">
+    <div
+      className="accordion w-2/3 text-left mt-10"
+      id="accordionExample2"
+      data-testid="valid-technicalAccordion"
+    >
       <div className="flex flex-row justify-start align-center ">
         <div className="p-2">
           <svg
@@ -17,7 +21,12 @@ function TechnicalAccordion() {
           </svg>
         </div>
 
-        <p className="text-2xl font-semibold p-2">Technical</p>
+        <p
+          className="text-2xl font-semibold p-2"
+          data-testid="valid-technicalAccordionTitle"
+        >
+          Technical
+        </p>
       </div>
 
       <div className="accordion-item bg-[#FEEEEE] border border-gray-200">
