@@ -91,7 +91,7 @@ function SignUpForm() {
                 type="submit"
                 disabled={isSubmitting}
               >
-                Create Account
+                Sign Up
               </button>
             </div>
             <div className="mb-8 text-center pt-2">
