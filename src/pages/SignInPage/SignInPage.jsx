@@ -10,7 +10,7 @@ function SignIn() {
           <div className="flex flex-col items-center justify-center h-screen mx-auto pb-10">
             <div className="w-full max-w-xs">
               <h1 className="text-[#6A2C70] text-4xl font-semibold mb-24 text-center sm:text-left">
-                Login
+                Sign In
               </h1>
               <SignInForm />
             </div>
