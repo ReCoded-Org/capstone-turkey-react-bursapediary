@@ -34,6 +34,7 @@ export default function Slider({ items }) {
     <div
       ref={slideRef}
       className="w-full h-40v lg:h-70v md:h-60v sm:h-50v relative  bg-secondary"
+      data-testid="slider"
     >
       <div className="flex flex-col tracking-wider lg:py-20 md:py-10 sm:py-8 lg:px-40 md:px-20 sm:px-10 items-center text-primary w-full h-full text-center justify-center ">
         <p className=" text-xl lg:text-2xl md:text-xl sm:text-xl font-bold ">
@@ -50,6 +51,7 @@ export default function Slider({ items }) {
         className="absolute top-1/2 left-1/4  text-primary cursor-pointer transition "
         onClick={() => handleOnClick('left')}
         type="submit"
+        aria-label="back-button"
       >
         <IoIosArrowBack size={30} />
       </button>
@@ -57,6 +59,7 @@ export default function Slider({ items }) {
         className="absolute top-1/2 right-1/4 text-primary cursor-pointer transition"
         onClick={() => handleOnClick('right')}
         type="submit"
+        aria-label="forward-button"
       >
         <IoIosArrowForward size={30} />
       </button>

@@ -49,19 +49,19 @@ const MOCKED_REVIEWS = [
   {
     id: 0,
     review:
-      '"I\'m a testimonial. Click to edit me and add  text that says something nice about you and your services."',
+      '"I\'m a testimonial. Click to edit me and add text that says something nice about you and your services."',
     clientName: 'Cristina Watts',
   },
   {
     id: 1,
     review:
-      '"I\'m second testimonial. Click to edit me and add  text that says something nice about you and your services."',
+      '"I\'m second testimonial. Click to edit me and add text that says something nice about you and your services."',
     clientName: 'Josh Watts',
   },
   {
     id: 2,
     review:
-      '"I\'m third testimonial. Click to edit me and add  text that says something nice about you and your services."',
+      '"I\'m third testimonial. Click to edit me and add text that says something nice about you and your services."',
     clientName: 'Alex Turner',
   },
 ];
