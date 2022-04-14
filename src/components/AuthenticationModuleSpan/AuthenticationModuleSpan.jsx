@@ -5,7 +5,7 @@ import {
 } from 'react-icons/ai';
 import { IoLogoDiscord } from 'react-icons/io5';
 
-function LeftSignInUp() {
+function AuthenticationModuleSpan() {
   return (
     <div className="hidden sm:flex flex-col justify-evenly grid-rows-5  col-span-3 w-full rectangle bg-[#FEEEEE]">
       <div className="pl-12">
@@ -51,4 +51,4 @@ function LeftSignInUp() {
   );
 }
 
-export default LeftSignInUp;
+export default AuthenticationModuleSpan;
