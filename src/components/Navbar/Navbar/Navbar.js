@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { AiOutlineGlobal } from 'react-icons/ai';
+import LanguageDropdown from '../LanguageDropdown/LanguageDropdown';
 
-import LanguageDropdown from './LanguageDropdown';
 /* import { Link } from 'react-router-dom';
 import {
   HOME_ROUTE,
@@ -22,7 +22,10 @@ function Navbar() {
 
   return (
     <header>
-      <nav className="navbar navbar-expand-md shadow-md py-2 bg-white relative flex items-center w-full justify-between mb-5">
+      <nav
+        className="navbar navbar-expand-md shadow-md py-2 bg-white relative flex items-center w-full justify-between mb-5"
+        data-testid="valid-navigation"
+      >
         <div className="px-6 w-full flex flex-wrap items-center justify-between">
           <div className="flex items-center ">
             <button
