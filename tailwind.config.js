@@ -7,6 +7,7 @@ module.exports = {
         secondary: '#FEEEEE',
         gray: '#878787',
         bgmain: '#FCFCFC',
+        primaryHover: '#803886',
       },
       height: {
         '10v': '10vh',

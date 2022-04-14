@@ -2,6 +2,7 @@ import mainHero from '../../assets/images/main-hero.svg';
 import {
   HOME_PAGE_TITLE,
   HOME_INFORMATION_TEXT,
+  HOME_ACTION_BUTTON_TEXT,
 } from '../../pages/Home/constants';
 
 function Information() {
@@ -13,6 +14,12 @@ function Information() {
       <p className="leading-normal sm:leading-loose text-gray text-sm lg:text-lg  md:text-base sm:text-sm  ">
         {HOME_INFORMATION_TEXT}
       </p>
+      <button
+        className="w-40 bg-primary hover:bg-primaryHover items-center text-white text-xs lg:text-sm md:text-sm sm:text-xs py-2 px-4 font-semibold rounded focus:outline-none focus:shadow-outline self-center sm:self-auto"
+        type="submit"
+      >
+        {HOME_ACTION_BUTTON_TEXT}
+      </button>
     </div>
   );
 }
