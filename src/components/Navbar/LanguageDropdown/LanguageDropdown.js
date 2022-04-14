@@ -29,6 +29,7 @@ function LanguageDropdown() {
         id="dropdownMenuButton1"
         data-bs-toggle="dropdown"
         aria-expanded="false"
+        data-testid="dropdown-menu"
       >
         English
         <svg
