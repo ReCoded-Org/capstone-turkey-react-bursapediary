@@ -10,7 +10,7 @@ import { MOCKED_PROJECTS, MOCKED_REVIEWS } from './data/index';
 
 function Home() {
   return (
-    <div>
+    <div data-testid="home-page">
       <Header />
       <Transation
         mainText={TRANSATION_MAIN_TEXT}
