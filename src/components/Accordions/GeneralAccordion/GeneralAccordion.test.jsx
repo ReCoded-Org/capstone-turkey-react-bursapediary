@@ -1,5 +1,5 @@
 import { render, cleanup } from '@testing-library/react';
-import GeneralAccordion from '../GeneralAccordion';
+import GeneralAccordion from './GeneralAccordion';
 
 describe('FAQ Page', () => {
   afterEach(() => cleanup());

@@ -1,5 +1,5 @@
 import { render, cleanup } from '@testing-library/react';
-import RegisterAccordion from '../RegisterAccordion';
+import RegisterAccordion from './RegisterAccordion';
 
 describe('FAQ Page', () => {
   afterEach(() => cleanup());

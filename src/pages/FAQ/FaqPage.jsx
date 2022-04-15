@@ -1,6 +1,6 @@
-import GeneralAccordion from '../components/Accordions/GeneralAccordion';
-import RegisterAccordion from '../components/Accordions/RegisterAccordion';
-import TechnicalAccordion from '../components/Accordions/TechnicalAccordion';
+import GeneralAccordion from '../../components/Accordions/GeneralAccordion/GeneralAccordion';
+import RegisterAccordion from '../../components/Accordions/RegisterAccordion/RegisterAccordion';
+import TechnicalAccordion from '../../components/Accordions/TechnicalAccordion/TechnicalAccordion';
 
 function FaqPage() {
   return (

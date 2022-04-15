@@ -1,5 +1,5 @@
 import { render, cleanup } from '@testing-library/react';
-import TechnicalAccordion from '../TechnicalAccordion';
+import TechnicalAccordion from './TechnicalAccordion';
 
 describe('FAQ Page', () => {
   afterEach(() => cleanup());
