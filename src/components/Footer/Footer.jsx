@@ -55,7 +55,7 @@ function Footer() {
                 LOCATIONS
               </h6>
 
-              <div className="flex justify-start ">
+              <div className="flex justify-center ">
                 <AiFillHome className="text-[#ffffff] text-xl mr-1" />
                 <a href="https://www.google.com/maps/place/Re:Coded/@41.028732,28.9748113,17z/data=!3m1!4b1!4m5!3m4!1s0x14cab92c15420c27:0x696a9c7a83366e60!8m2!3d41.028728!4d28.977">
                   <p className="flex items-center justify-center md:justify-start mb-4 text-white ">
@@ -64,7 +64,7 @@ function Footer() {
                 </a>
               </div>
 
-              <div className="flex justify-start">
+              <div className="flex justify-center">
                 <AiFillHome className="text-[#ffffff] text-xl mr-1" />
                 <a href="https://www.google.com/maps/place/1178+Broadway+2+1033,+New+York,+NY+10001,+Amerika+Birle%C5%9Fik+Devletleri/@40.7452728,-73.9905456,17z/data=!3m1!4b1!4m5!3m4!1s0x89c259a60f737d9f:0x29524ecce6633e4e!8m2!3d40.7452688!4d-73.9883569">
                   <p className="flex items-center justify-center md:justify-start mb-4 text-white">
