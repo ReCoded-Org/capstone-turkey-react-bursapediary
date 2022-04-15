@@ -15,7 +15,7 @@ function Footer() {
       >
         <div className="mx-6 pt-5 text-center md:text-left">
           <div className="grid grid-1 md:grid-cols-3 lg:grid-cols-3 gap-12">
-            <div className="">
+            <div>
               <h6
                 className="
                 font-semibold
@@ -39,7 +39,7 @@ function Footer() {
               </a>
             </div>
 
-            <div className="">
+            <div>
               <h6 className="font-semibold mb-4 flex justify-center md:justify-start text-white   ">
                 CAREERS
               </h6>
@@ -50,8 +50,8 @@ function Footer() {
                 or continuing your career, explore how you can work with us.
               </p>
             </div>
-            <div className="">
-              <h6 className="uppercase font-semibold mb-4 flex justify-center md:justify-start text-white">
+            <div>
+              <h6 className="uppercase font-semibold mb-4 flex justify-center md:justify-center text-white">
                 LOCATIONS
               </h6>
 
