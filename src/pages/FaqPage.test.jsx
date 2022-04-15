@@ -16,12 +16,6 @@ describe('FAQ Page', () => {
     expect(pageHeader).toBeInTheDocument();
   });
 
-  test('should render input', () => {
-    const { getByTestId } = render(<FaqPage />);
-    const input = getByTestId('valid-input');
-    expect(input).toBeInTheDocument();
-  });
-
   test('should render accordions', () => {
     const { getByTestId } = render(<FaqPage />);
     const page = getByTestId('valid-accordions');
