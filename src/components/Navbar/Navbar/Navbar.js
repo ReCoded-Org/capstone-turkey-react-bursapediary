@@ -28,6 +28,17 @@ function Navbar() {
       >
         <div className="px-6 w-full flex flex-wrap items-center justify-between">
           <div className="flex items-center ">
+            <a
+              href="#home"
+              // to={HOME_ROUTE}
+              className="flex items-center py-2 lg:px-4"
+            >
+              <img
+                src="https://user-images.githubusercontent.com/60944453/162048684-bbbe43f3-cd5b-4e93-908f-825ac7166ed1.PNG"
+                alt="Logo"
+                className="w-14 md:mr-2 sm:top-3 sm:right-4 sm:fixed sm:w-11 xs:top-4 xs:right-4 xs:w-10 xs:fixed"
+              />
+            </a>
             <button
               className="navbar-toggler border-0 py-3 lg:hidden md:hidden  leading-none text-xl bg-transparent text-gray-600 hover:text-gray-700 focus:text-gray-700 transition-shadow duration-150 ease-in-out mr-2 sm:relative sm:right-0"
               type="button"
@@ -58,19 +69,6 @@ function Navbar() {
             id="navbarSupportedContentY"
           >
             <ul className="navbar-nav mr-auto items-center lg:flex lg:flex-row md:flex md:flex-row ">
-              <li className="nav-item">
-                <a
-                  href="#home"
-                  // to={HOME_ROUTE}
-                  className="flex items-center py-2 lg:px-4"
-                >
-                  <img
-                    src="https://user-images.githubusercontent.com/60944453/162048684-bbbe43f3-cd5b-4e93-908f-825ac7166ed1.PNG"
-                    alt="Logo"
-                    className="w-14 sm:top-4 sm:right-4 sm:fixed sm:w-11 xs:top-4 xs:right-4 xs:w-10 xs:fixed"
-                  />
-                </a>
-              </li>
               <li className="nav-item">
                 <a
                   href="#home"
