@@ -17,7 +17,7 @@ function Navbar() {
   const [isShow, setIsShow] = useState(true);
 
   function handleShowMenu() {
-    setIsShow(false);
+    setIsShow(!isShow);
   }
 
   return (
@@ -155,7 +155,17 @@ function Navbar() {
                     Sign In
                   </button>
                 ) : (
-                  <h1 className="flex items-center mt-2.5">Avatar</h1>
+                  <div className="flex items-center ">
+                    <h1 className="pr-4 ">Avatar</h1>
+                    <button
+                      /* to={SIGN_OUT_ROUTE} */
+                      className="nav-link block pl-2 pr-4 lg:px-2 py-2 text-white bg-purple-800 rounded border border-black  font-semibold transition duration-150 ease-in-out hover:shadow-xl xs:text-sm "
+                      type="button"
+                      onClick={handleShowMenu}
+                    >
+                      Sign Out
+                    </button>
+                  </div>
                 )}
               </li>
               <li className="nav-item lg:mb-0 pr-2">
