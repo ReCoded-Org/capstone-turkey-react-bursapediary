@@ -9,10 +9,10 @@ function AuthenticationModuleSpan() {
   return (
     <div className="hidden sm:flex flex-col justify-evenly grid-rows-5  col-span-3 w-full rectangle bg-[#FEEEEE]">
       <div className="pl-12">
-        <h1 className="text-[#6A2C70]  pt-16 mr-12 text-5xl font-bold text-center sm:text-left">
+        <h1 className="text-[#6A2C70] pt-16 mr-12 text-5xl font-bold text-center sm:text-left">
           Dreams Will <p className="break-words" /> Come True
         </h1>
-        <p className="text-[#6A2C70] pt-6 mr-2 mb-16 mr-12 text-center sm:text-left">
+        <p className="text-[#6A2C70] pt-6 mb-16 mr-12 text-center sm:text-left">
           If you are a dreamer who pursue, you can find supporters for your
           dreams with Bursapediary. If you are a supporter, meet with the
           dreamers and help their dreams to come true.
