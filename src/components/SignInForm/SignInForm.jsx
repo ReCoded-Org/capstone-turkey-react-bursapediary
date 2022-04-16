@@ -11,12 +11,6 @@ function SignInForm() {
           .required('*Email is required'),
         password: Yup.string().required('*Password is required'),
       })}
-      onSubmit={(values, { setSubmitting }) => {
-        setTimeout(() => {
-          alert(JSON.stringify(values, null, 2));
-          setSubmitting(false);
-        }, 400);
-      }}
     >
       {({ values, isSubmitting, handleChange, handleBlur, handleSubmit }) => {
         return (

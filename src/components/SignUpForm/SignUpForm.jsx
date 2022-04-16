@@ -12,12 +12,6 @@ function SignUpForm() {
         password: Yup.string().required('*Password is required'),
         name: Yup.string().required('*Full name is required'),
       })}
-      onSubmit={(values, { setSubmitting }) => {
-        setTimeout(() => {
-          alert(JSON.stringify(values, null, 2));
-          setSubmitting(false);
-        }, 400);
-      }}
     >
       {({ values, isSubmitting, handleChange, handleBlur, handleSubmit }) => {
         return (
