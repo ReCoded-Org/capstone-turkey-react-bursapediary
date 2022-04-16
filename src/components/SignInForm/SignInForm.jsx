@@ -30,6 +30,7 @@ function SignInForm() {
                   onBlur={handleBlur}
                 />
                 <ErrorMessage
+                  data-testid="emailError"
                   name="email"
                   component="div"
                   className="text-red-500 text-xs italic absolute"
@@ -51,6 +52,7 @@ function SignInForm() {
                   onBlur={handleBlur}
                 />
                 <ErrorMessage
+                  data-testid="emailError"
                   name="password"
                   component="div"
                   className="text-red-500 text-xs italic absolute"
