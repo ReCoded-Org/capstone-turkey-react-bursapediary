@@ -1,4 +1,8 @@
+import { useState } from 'react';
+
 function LanguageDropdown() {
+  const [language, setLanguage] = useState('English');
+
   return (
     <div className="dropdown relative ">
       <button
@@ -31,7 +35,7 @@ function LanguageDropdown() {
         aria-expanded="false"
         data-testid="dropdown-menu"
       >
-        English
+        {language}
         <svg
           aria-hidden="true"
           focusable="false"
@@ -70,7 +74,7 @@ function LanguageDropdown() {
                      "
         aria-labelledby="dropdownMenuButton1"
       >
-        <a
+        <button
           className="
                         dropdown-item
                         text-sm
@@ -84,10 +88,32 @@ function LanguageDropdown() {
                         text-gray-700
                         hover:bg-gray-100
                         "
-          href="#home"
+          href="#turkish"
+          onClick={() => setLanguage('Turkish')}
+          type="button"
         >
           Turkish
-        </a>
+        </button>
+        <button
+          className="
+                        dropdown-item
+                        text-sm
+                        py-2
+                        px-9
+                        font-normal
+                        block
+                        w-full
+                        whitespace-nowrap
+                        bg-transparent
+                        text-gray-700
+                        hover:bg-gray-100
+                        "
+          href="#english"
+          onClick={() => setLanguage('English')}
+          type="button"
+        >
+          English
+        </button>
       </ul>
     </div>
   );
