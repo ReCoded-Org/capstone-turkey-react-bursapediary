@@ -6,7 +6,7 @@ describe('LanguageDropdown', () => {
   afterEach(() => cleanup());
   test('should render button inner text', () => {
     const { getByText } = render(<LanguageDropdown />);
-    const buttonText = getByText('English');
+    const buttonText = getByText('Turkish');
     expect(buttonText).toBeInTheDocument();
   });
 
