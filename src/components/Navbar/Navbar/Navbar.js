@@ -23,7 +23,7 @@ function Navbar() {
   return (
     <header>
       <nav
-        className="navbar navbar-expand-md shadow-md py-2 bg-white relative flex items-center w-full justify-between mb-5"
+        className="navbar navbar-expand-md shadow-md py-2 bg-bgmain relative flex items-center w-full justify-between mb-5"
         data-testid="valid-navigation"
       >
         <div className="px-6 w-full flex flex-wrap items-center justify-between">
@@ -73,7 +73,7 @@ function Navbar() {
                 <a
                   href="#home"
                   /* to={HOME_ROUTE} */
-                  className="nav-link block pr-2 lgnav:px-2 py-2 text-purple-800 font-semibold hover:text-purple-600 transition duration-150 ease-in-out smnav:text-center xsnav:text-center smnav:bg-gray-100 xsnav:bg-gray-100"
+                  className="nav-link block pr-2 lgnav:px-2 py-2 text-primary font-semibold hover:text-primaryHover transition duration-150 ease-in-out smnav:text-center xsnav:text-center smnav:bg-gray-100 xsnav:bg-gray-100"
                   data-mdb-ripple="true"
                   data-mdb-ripple-color="light"
                 >
@@ -84,7 +84,7 @@ function Navbar() {
                 <a
                   /*  to={PROJECT_ROUTE} */
                   href="#home"
-                  className="nav-link block pr-2 lgnav:px-2 py-2 text-purple-800  font-semibold hover:text-purple-600 transition duration-150 ease-in-out smnav:text-center xsnav:text-center smnav:bg-gray-200 xsnav:bg-gray-200"
+                  className="nav-link block pr-2 lgnav:px-2 py-2 text-primary  font-semibold hover:text-primaryHover transition duration-150 ease-in-out smnav:text-center xsnav:text-center smnav:bg-secondary xsnav:bg-secondary"
                   data-mdb-ripple="true"
                   data-mdb-ripple-color="light"
                 >
@@ -95,7 +95,7 @@ function Navbar() {
                 <a
                   /* to={FAQ_ROUTE} */
                   href="#home"
-                  className="nav-link block pr-2 lgnav:px-2 py-2 text-purple-800   font-semibold hover:text-purple-600 transition duration-150 ease-in-out smnav:text-center xsnav:text-center smnav:bg-gray-100  xsnav:bg-gray-100"
+                  className="nav-link block pr-2 lgnav:px-2 py-2 text-primary   font-semibold hover:text-primaryHover transition duration-150 ease-in-out smnav:text-center xsnav:text-center smnav:bg-gray-100  xsnav:bg-gray-100"
                   data-mdb-ripple="true"
                   data-mdb-ripple-color="light"
                 >
@@ -106,7 +106,7 @@ function Navbar() {
                 <a
                   /*  to={PROJECT_ROUTE} */
                   href="#home"
-                  className="nav-link block pr-2 lgnav:px-2 py-2 text-purple-800  font-semibold hover:text-purple-600 transition duration-150 ease-in-out smnav:text-center xsnav:text-center smnav:bg-gray-200 xsnav:bg-gray-200"
+                  className="nav-link block pr-2 lgnav:px-2 py-2 text-primary  font-semibold hover:text-primaryHover transition duration-150 ease-in-out smnav:text-center xsnav:text-center smnav:bg-secondary xsnav:bg-secondary"
                   data-mdb-ripple="true"
                   data-mdb-ripple-color="light"
                 >
@@ -117,7 +117,7 @@ function Navbar() {
                 <a
                   /* to={CONTACT_ROUTE} */
                   href="#!"
-                  className="nav-link block pr-2 lgnav:px-2 py-2 text-purple-800   font-semibold hover:text-purple-600 transition duration-150 ease-in-out smnav:text-center xsnav:text-center smnav:bg-gray-100  xsnav:bg-gray-100"
+                  className="nav-link block pr-2 lgnav:px-2 py-2 text-primary   font-semibold hover:text-primaryHover transition duration-150 ease-in-out smnav:text-center xsnav:text-center smnav:bg-gray-100  xsnav:bg-gray-100"
                   data-mdb-ripple="true"
                   data-mdb-ripple-color="light"
                 >
@@ -131,7 +131,7 @@ function Navbar() {
                 {isShow && (
                   <button
                     /* to={SIGN_UP_ROUTE} */
-                    className="nav-link block pl-2 pr-2 lgnav:px-2 py-2 font-semibold hover:text-purple-800 hover:shadow-xl transition duration-150 ease-in-out text-black rounded border border-black xsnav:text-sm "
+                    className="nav-link block pl-2 pr-2 lgnav:px-2 py-2 font-semibold hover:text-primary hover:shadow-xl transition duration-150 ease-in-out text-black rounded border border-black xsnav:text-sm "
                     data-mdb-ripple="true"
                     data-mdb-ripple-color="light"
                     type="button"
@@ -157,7 +157,7 @@ function Navbar() {
                     <h1 className="pr-4 ">Avatar</h1>
                     <button
                       /* to={SIGN_OUT_ROUTE} */
-                      className="nav-link block pl-2 pr-4 lgnav:px-2 py-2 text-white bg-purple-800 rounded border border-black  font-semibold transition duration-150 ease-in-out hover:shadow-xl xsnav:text-sm "
+                      className="nav-link block pl-2 pr-4 lgnav:px-2 py-2 text-white bg-primary rounded border border-black  font-semibold transition duration-150 ease-in-out hover:shadow-xl xsnav:text-sm "
                       type="button"
                       onClick={handleShowMenu}
                     >

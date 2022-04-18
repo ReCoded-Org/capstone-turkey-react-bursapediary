@@ -87,6 +87,7 @@ function LanguageDropdown() {
                         bg-transparent
                         text-gray-700
                         hover:bg-gray-100
+                        active:bg-bgmain
                         "
           href="#turkish"
           onClick={() => setLanguage('Turkish')}
@@ -107,6 +108,7 @@ function LanguageDropdown() {
                         bg-transparent
                         text-gray-700
                         hover:bg-gray-100
+                        active:bg-bgmain
                         "
           href="#english"
           onClick={() => setLanguage('English')}
