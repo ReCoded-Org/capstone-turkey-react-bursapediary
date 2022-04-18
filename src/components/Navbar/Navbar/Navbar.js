@@ -31,16 +31,16 @@ function Navbar() {
             <a
               href="#home"
               // to={HOME_ROUTE}
-              className="flex items-center py-2 lg:px-4"
+              className="flex items-center py-2 lgnav:px-4"
             >
               <img
                 src="https://user-images.githubusercontent.com/60944453/162048684-bbbe43f3-cd5b-4e93-908f-825ac7166ed1.PNG"
                 alt="Logo"
-                className="w-14 md:mr-2 sm:top-3 sm:right-4 sm:fixed sm:w-11 xs:top-4 xs:right-4 xs:w-10 xs:fixed"
+                className="w-14  smnav:top-3 smnav:right-4 smnav:fixed smnav:w-11 xsnav:top-4 xsnav:right-4 xsnav:w-10 xsnav:fixed"
               />
             </a>
             <button
-              className="navbar-toggler border-0 py-3 lg:hidden md:hidden  leading-none text-xl bg-transparent text-gray-600 hover:text-gray-700 focus:text-gray-700 transition-shadow duration-150 ease-in-out mr-2 sm:relative sm:right-0"
+              className="navbar-toggler border-0 py-3 lgnav:hidden mdnav:hidden  leading-none text-xl bg-transparent text-gray-600 hover:text-gray-700 focus:text-gray-700 transition-shadow duration-150 ease-in-out mr-2 smnav:relative smnav:right-0"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContentY"
@@ -68,12 +68,12 @@ function Navbar() {
             className="navbar-collapse collapse grow items-center "
             id="navbarSupportedContentY"
           >
-            <ul className="navbar-nav mr-auto items-center lg:flex lg:flex-row md:flex md:flex-row ">
+            <ul className="navbar-nav mr-auto items-center lgnav:flex lgnav:flex-row mdnav:flex mdnav:flex-row ">
               <li className="nav-item">
                 <a
                   href="#home"
                   /* to={HOME_ROUTE} */
-                  className="nav-link block pr-2 lg:px-2 py-2 text-purple-800 font-semibold hover:text-purple-600 transition duration-150 ease-in-out sm:text-center xs:text-center sm:bg-gray-100  xs:bg-gray-100"
+                  className="nav-link block pr-2 lgnav:px-2 py-2 text-purple-800 font-semibold hover:text-purple-600 transition duration-150 ease-in-out smnav:text-center xsnav:text-center smnav:bg-gray-100 xsnav:bg-gray-100"
                   data-mdb-ripple="true"
                   data-mdb-ripple-color="light"
                 >
@@ -84,7 +84,7 @@ function Navbar() {
                 <a
                   /*  to={PROJECT_ROUTE} */
                   href="#home"
-                  className="nav-link block pr-2 lg:px-2 py-2 text-purple-800  font-semibold hover:text-purple-600 transition duration-150 ease-in-out sm:text-center xs:text-center sm:bg-gray-200 xs:bg-gray-200"
+                  className="nav-link block pr-2 lgnav:px-2 py-2 text-purple-800  font-semibold hover:text-purple-600 transition duration-150 ease-in-out smnav:text-center xsnav:text-center smnav:bg-gray-200 xsnav:bg-gray-200"
                   data-mdb-ripple="true"
                   data-mdb-ripple-color="light"
                 >
@@ -95,7 +95,7 @@ function Navbar() {
                 <a
                   /* to={FAQ_ROUTE} */
                   href="#home"
-                  className="nav-link block pr-2 lg:px-2 py-2 text-purple-800   font-semibold hover:text-purple-600 transition duration-150 ease-in-out sm:text-center xs:text-center sm:bg-gray-100  xs:bg-gray-100"
+                  className="nav-link block pr-2 lgnav:px-2 py-2 text-purple-800   font-semibold hover:text-purple-600 transition duration-150 ease-in-out smnav:text-center xsnav:text-center smnav:bg-gray-100  xsnav:bg-gray-100"
                   data-mdb-ripple="true"
                   data-mdb-ripple-color="light"
                 >
@@ -106,7 +106,7 @@ function Navbar() {
                 <a
                   /*  to={PROJECT_ROUTE} */
                   href="#home"
-                  className="nav-link block pr-2 lg:px-2 py-2 text-purple-800  font-semibold hover:text-purple-600 transition duration-150 ease-in-out sm:text-center xs:text-center sm:bg-gray-200 xs:bg-gray-200"
+                  className="nav-link block pr-2 lgnav:px-2 py-2 text-purple-800  font-semibold hover:text-purple-600 transition duration-150 ease-in-out smnav:text-center xsnav:text-center smnav:bg-gray-200 xsnav:bg-gray-200"
                   data-mdb-ripple="true"
                   data-mdb-ripple-color="light"
                 >
@@ -117,7 +117,7 @@ function Navbar() {
                 <a
                   /* to={CONTACT_ROUTE} */
                   href="#!"
-                  className="nav-link block pr-2 lg:px-2 py-2 text-purple-800   font-semibold hover:text-purple-600 transition duration-150 ease-in-out sm:text-center xs:text-center sm:bg-gray-100  xs:bg-gray-100"
+                  className="nav-link block pr-2 lgnav:px-2 py-2 text-purple-800   font-semibold hover:text-purple-600 transition duration-150 ease-in-out smnav:text-center xsnav:text-center smnav:bg-gray-100  xsnav:bg-gray-100"
                   data-mdb-ripple="true"
                   data-mdb-ripple-color="light"
                 >
@@ -126,12 +126,12 @@ function Navbar() {
               </li>
             </ul>
 
-            <ul className="navbar-nav lg:flex lg:flex-row flex flex-nowrap md:flex-row sm:flex-row ml-2 sm:mt-6 xs:mt-6 sm:justify-center xs:justify-center">
-              <li className="nav-item mb-2 pr-2 lg:mb-0">
+            <ul className="navbar-nav lgnav:flex lgnav:flex-row flex flex-nowrap mdnav:flex-row smnav:flex-row ml-1 smnav:mt-6 xsnav:mt-6 smnav:justify-center xsnav:justify-center">
+              <li className="nav-item mb-2 pr-2 lgnav:mb-0">
                 {isShow && (
                   <button
                     /* to={SIGN_UP_ROUTE} */
-                    className="nav-link block pl-2 pr-2 lg:px-2 py-2 font-semibold hover:text-purple-800 hover:shadow-xl transition duration-150 ease-in-out text-black rounded border border-black xs:text-sm "
+                    className="nav-link block pl-2 pr-2 lgnav:px-2 py-2 font-semibold hover:text-purple-800 hover:shadow-xl transition duration-150 ease-in-out text-black rounded border border-black xsnav:text-sm "
                     data-mdb-ripple="true"
                     data-mdb-ripple-color="light"
                     type="button"
@@ -140,11 +140,11 @@ function Navbar() {
                   </button>
                 )}
               </li>
-              <li className="nav-item mb-2 lg:mb-0 pr-2">
+              <li className="nav-item mb-2 lgnav:mb-0 pr-2">
                 {isShow ? (
                   <button
                     /* to={SIGN_IN_ROUTE} */
-                    className="nav-link block pl-2 pr-4 lg:px-2 py-2 text-white bg-purple-800 rounded border border-black  font-semibold transition duration-150 ease-in-out hover:shadow-xl xs:text-sm "
+                    className="nav-link block pl-2 pr-4 lgnav:px-2 py-2 text-white bg-primary rounded border border-black  font-semibold transition duration-150 ease-in-out hover:shadow-xl xsnav:text-sm "
                     data-mdb-ripple="true"
                     data-mdb-ripple-color="light"
                     type="button"
@@ -157,7 +157,7 @@ function Navbar() {
                     <h1 className="pr-4 ">Avatar</h1>
                     <button
                       /* to={SIGN_OUT_ROUTE} */
-                      className="nav-link block pl-2 pr-4 lg:px-2 py-2 text-white bg-purple-800 rounded border border-black  font-semibold transition duration-150 ease-in-out hover:shadow-xl xs:text-sm "
+                      className="nav-link block pl-2 pr-4 lgnav:px-2 py-2 text-white bg-purple-800 rounded border border-black  font-semibold transition duration-150 ease-in-out hover:shadow-xl xsnav:text-sm "
                       type="button"
                       onClick={handleShowMenu}
                     >
@@ -166,10 +166,10 @@ function Navbar() {
                   </div>
                 )}
               </li>
-              <li className="nav-item lg:mb-0 pr-2">
+              <li className="nav-item lgnav:mb-0 pr-2">
                 <AiOutlineGlobal className="w-6 h-6 my-2" />
               </li>
-              <li className="nav-item lg:mb-0">
+              <li className="nav-item lgnav:mb-0">
                 <LanguageDropdown />
               </li>
             </ul>
