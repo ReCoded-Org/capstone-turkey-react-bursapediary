@@ -1,4 +1,4 @@
-import Projects from '../../components/Projects/Projects';
+import Projects from '../../features/projects/Projects';
 import ProjectsTypes from '../../components/Projects/ProjectsTypes';
 
 function ProjectsPage() {
