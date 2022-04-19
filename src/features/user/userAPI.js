@@ -13,21 +13,3 @@ const login = async (dispatch, user) => {
 };
 
 export default login;
-
-/* export const signup = async (dispatch, user) => {
-  dispatch(registerStart());
-  try {
-    const res = await publicRequest.post('/auth/register', user);
-    const friend = await publicRequest.put('/users/cosmic/add', {
-      _id: res.data._id,
-    });
-    const conversation = await publicRequest.post('/conversations', {
-      senderId: res.data._id,
-      receiverId: 'WwhdtvyklGhh',
-    });
-    dispatch(registerSuccess(res.data));
-  } catch (error) {
-    dispatch(registerFailure());
-  }
-};
- */
