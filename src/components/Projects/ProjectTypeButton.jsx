@@ -104,5 +104,5 @@ export default function ProjectTypeButton({ title }) {
 }
 
 ProjectTypeButton.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.node.isRequired,
 };
