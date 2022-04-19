@@ -28,7 +28,7 @@ function RegisterAccordion() {
         </p>
       </div>
 
-      <div className="accordion-item bg-[#FEEEEE] border border-gray-200">
+      <div className="accordion-item bg-[#FEEEEE]">
         <h2 className="accordion-header mb-0" id="headingOne3">
           <button
             className="
@@ -42,7 +42,6 @@ function RegisterAccordion() {
             px-5
             font-semibold
             text-base text-[#6A2C70] text-left
-            border-0
             rounded-none
             transition
             focus:outline-none
@@ -73,7 +72,7 @@ function RegisterAccordion() {
           </div>
         </div>
       </div>
-      <div className="accordion-item bg-[#FEEEEE] border border-gray-200">
+      <div className="accordion-item bg-[#FEEEEE]">
         <h2 className="accordion-header mb-0" id="headingTwo3">
           <button
             className="
@@ -90,7 +89,6 @@ function RegisterAccordion() {
               text-[#6A2C70] 
               text-left
               bg-[#FEEEEE]
-              border-0
               rounded-none
               transition
               focus:outline-none
@@ -121,7 +119,7 @@ function RegisterAccordion() {
           </div>
         </div>
       </div>
-      <div className="accordion-item bg-[#FEEEEE] border border-gray-200">
+      <div className="accordion-item bg-[#FEEEEE]">
         <h2 className="accordion-header mb-0" id="headingThree3">
           <button
             className="
@@ -138,7 +136,6 @@ function RegisterAccordion() {
               text-[#6A2C70] 
               text-left
               bg-[#FEEEEE]
-              border-0
               rounded-none
               transition
               focus:outline-none

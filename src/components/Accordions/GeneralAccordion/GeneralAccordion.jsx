@@ -27,7 +27,7 @@ function GeneralAccordion() {
           General
         </p>
       </div>
-      <div className="accordion-item bg-[#FEEEEE] border border-gray-200">
+      <div className="accordion-item bg-[#FEEEEE]">
         <h2 className="accordion-header mb-0" id="headingOne">
           <button
             className="
@@ -41,7 +41,6 @@ function GeneralAccordion() {
             px-5
             font-semibold
             text-base text-[#6A2C70] text-left
-            border-0
             rounded-none
             transition
             focus:outline-none
@@ -72,7 +71,7 @@ function GeneralAccordion() {
           </div>
         </div>
       </div>
-      <div className="accordion-item bg-white border border-gray-200">
+      <div className="accordion-item bg-white">
         <h2 className="accordion-header mb-0" id="headingTwo">
           <button
             className="
@@ -87,7 +86,6 @@ function GeneralAccordion() {
             font-semibold
             text-base text-[#6A2C70] text-left
             bg-[#FEEEEE]
-            border-0
             rounded-none
             transition
             focus:outline-none
@@ -118,7 +116,7 @@ function GeneralAccordion() {
           </div>
         </div>
       </div>
-      <div className="accordion-item bg-white border border-gray-200">
+      <div className="accordion-item bg-white">
         <h2 className="accordion-header mb-0" id="headingThree">
           <button
             className="
@@ -133,7 +131,6 @@ function GeneralAccordion() {
             font-semibold
             text-base text-[#6A2C70] text-left
             bg-[#FEEEEE]
-            border-0
             rounded-none
             transition
             focus:outline-none            
