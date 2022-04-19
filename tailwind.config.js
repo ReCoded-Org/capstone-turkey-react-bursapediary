@@ -1,5 +1,8 @@
 module.exports = {
-  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  content: [
+    './src/**/*.{js,jsx,ts,tsx}',
+    './node_modules/tw-elements/dist/js/**/*.js',
+  ],
   theme: {
     extend: {
       colors: {
@@ -28,5 +31,6 @@ module.exports = {
       pattern: /^(.*?)/,
     },
   ],
-  plugins: [],
+  // eslint-disable-next-line global-require
+  plugins: [require('tw-elements/dist/plugin')],
 };
