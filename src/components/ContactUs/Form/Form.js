@@ -3,7 +3,6 @@ import emailjs from '@emailjs/browser';
 import { Formik } from 'formik';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-// import { sendEmail } from '../../../utils/Helpers';
 
 function Form() {
   const form = useRef();
