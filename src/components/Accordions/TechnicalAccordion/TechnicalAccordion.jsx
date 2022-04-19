@@ -29,7 +29,7 @@ function TechnicalAccordion() {
         </p>
       </div>
 
-      <div className="accordion-item bg-[#FEEEEE]">
+      <div className="accordion-item bg-[#FEEEEE] border-b-2 border-pink-200">
         <h2 className="accordion-header mb-0" id="headingTwo">
           <button
             className="
@@ -73,7 +73,7 @@ function TechnicalAccordion() {
           </div>
         </div>
       </div>
-      <div className="accordion-item bg-white">
+      <div className="accordion-item bg-white border-b-2 border-pink-200">
         <h2 className="accordion-header mb-0" id="headingTwo">
           <button
             className="
@@ -118,7 +118,7 @@ function TechnicalAccordion() {
           </div>
         </div>
       </div>
-      <div className="accordion-item bg-white">
+      <div className="accordion-item bg-white border-b-2 border-pink-200">
         <h2 className="accordion-header mb-0" id="headingThree">
           <button
             className="
