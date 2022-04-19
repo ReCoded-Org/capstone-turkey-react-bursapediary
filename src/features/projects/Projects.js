@@ -15,14 +15,19 @@ function Projects() {
 
   return (
     <div className="grid grid-1 md:grid-cols-3 lg:grid-cols-3 gap-12 p-9 justify-center">
-      {projectDetails != null &&
-        projectDetails.map((e) => (
-          <ProjectCard
-            title={e.title}
-            image={image}
-            description={e.description}
-          />
-        ))}
+      {projectDetails !== null &&
+        projectDetails.map((e) => {
+          return (
+            // eslint-disable-next-line no-underscore-dangle
+            <div key={e._id}>
+              <ProjectCard
+                title={e.title}
+                image={image}
+                description={e.description}
+              />
+            </div>
+          );
+        })}
     </div>
   );
 }
