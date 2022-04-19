@@ -90,7 +90,7 @@ export default function ProjectTypeButton({ title }) {
                 hover:bg-black
                 hover:text-white
               "
-                  href={`#${element}`}
+                  href={`${element.toLowerCase()}`}
                 >
                   {element}
                 </a>
