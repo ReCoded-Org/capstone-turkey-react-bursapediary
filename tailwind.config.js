@@ -5,6 +5,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        xsnav: { max: '639px' }, // Mobile (iPhone 3 - iPhone XS Max).
+        smnav: { min: '640px', max: '767px' }, // Mobile (matches max: iPhone 11 Pro Max landscape @ 896px).
+        mdnav: { min: '768px', max: '1199px' }, // Tablet (matches max: iPad Pro @ 1112px).
+        lgnav: { min: '1200px' }, // Desktop smallest.
+        xlnav: { min: '1159px' }, // Desktop wide.
+        xxlnav: { min: '1359px' }, // Desktop widescreen.
+      },
       colors: {
         primary: '#6A2C70',
         secondary: '#FEEEEE',
@@ -26,11 +34,11 @@ module.exports = {
       },
     },
   },
+  // eslint-disable-next-line global-require
+  plugins: [require('tw-elements/dist/plugin')],
   safelist: [
     {
       pattern: /^(.*?)/,
     },
   ],
-  // eslint-disable-next-line global-require
-  plugins: [require('tw-elements/dist/plugin')],
 };
