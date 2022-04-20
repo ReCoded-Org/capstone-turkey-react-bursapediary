@@ -1,8 +1,14 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-export default function ProjectTypeButton({ title }) {
-  const [categories, setCategories] = useState('Categories');
+export default function ProjectTypeButton({ title, setSpecific }) {
+  const [categories, setCategories] = useState('All');
+
+  useEffect(
+    () => setSpecific(categories.toLowerCase()),
+    [categories, setSpecific],
+  );
+
   return (
     <div className="flex justify-center">
       <div>
@@ -90,7 +96,7 @@ export default function ProjectTypeButton({ title }) {
                 hover:bg-black
                 hover:text-white
               "
-                  href={`${element.toLowerCase()}`}
+                  href={`#${element.toLowerCase()}`}
                 >
                   {element}
                 </a>
@@ -105,4 +111,5 @@ export default function ProjectTypeButton({ title }) {
 
 ProjectTypeButton.propTypes = {
   title: PropTypes.node.isRequired,
+  setSpecific: PropTypes.func.isRequired,
 };
