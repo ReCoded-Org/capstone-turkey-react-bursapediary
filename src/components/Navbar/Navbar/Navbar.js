@@ -36,7 +36,7 @@ function Navbar() {
               <img
                 src="https://user-images.githubusercontent.com/60944453/162048684-bbbe43f3-cd5b-4e93-908f-825ac7166ed1.PNG"
                 alt="Logo"
-                className="w-14  smnav:top-3 smnav:right-4 smnav:fixed smnav:w-11 xsnav:top-4 xsnav:right-4 xsnav:w-10 xsnav:fixed"
+                className="w-14  smnav:top-3 smnav:right-4 smnav:absolute smnav:w-11 xsnav:top-4 xsnav:right-4 xsnav:w-10 xsnav:absolute"
               />
             </a>
             <button
