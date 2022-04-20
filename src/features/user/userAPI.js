@@ -1,6 +1,13 @@
 import axios from 'axios';
 
-import { loginStart, loginSuccess, loginFailure } from './userSlice';
+import {
+  loginStart,
+  loginSuccess,
+  loginFailure,
+  registerStart,
+  registerSuccess,
+  registerFailure,
+} from './userSlice';
 
 const login = async (dispatch, user) => {
   dispatch(loginStart());
@@ -12,4 +19,16 @@ const login = async (dispatch, user) => {
   }
 };
 
-export default login;
+const register = async (dispatch, user) => {
+  dispatch(registerStart());
+  try {
+    const res = await axios.post(
+      'https://bursapediary.com/users/register',
+      user,
+    );
+    dispatch(registerSuccess(res.data));
+  } catch (error) {
+    dispatch(registerFailure());
+  }
+};
+export { login, register };

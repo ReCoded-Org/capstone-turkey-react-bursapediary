@@ -1,7 +1,8 @@
 import { Formik, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { useDispatch } from 'react-redux';
-import login from '../../features/user/userAPI';
+
+import { login } from '../../features/user/userAPI';
 
 function SignInForm() {
   const dispatch = useDispatch();
@@ -10,7 +11,6 @@ function SignInForm() {
     <Formik
       onSubmit={(values, { setSubmitting }) => {
         login(dispatch, values);
-        console.log(values);
         setSubmitting(false);
       }}
       initialValues={{ username: '', password: '' }}

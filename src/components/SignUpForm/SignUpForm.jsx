@@ -1,9 +1,18 @@
 import { Formik, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+import { useDispatch } from 'react-redux';
+
+import { register } from '../../features/user/userAPI';
 
 function SignUpForm() {
+  const dispatch = useDispatch();
+
   return (
     <Formik
+      onSubmit={(values, { setSubmitting }) => {
+        register(dispatch, values);
+        setSubmitting(false);
+      }}
       initialValues={{
         email: '',
         password: '',
