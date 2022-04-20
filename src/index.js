@@ -6,12 +6,12 @@ import store from './app/store';
 
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import SignInPage from './pages/SignInPage/SignInPage';
+import SignUpPage from './pages/SignUpPage/SignUpPage';
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <SignInPage />
+      <SignUpPage />
     </Provider>
   </React.StrictMode>,
   document.getElementById('root'),
