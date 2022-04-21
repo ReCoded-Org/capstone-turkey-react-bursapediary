@@ -35,45 +35,45 @@ function Projects() {
       <div className="grid grid-1 md:grid-cols-3 lg:grid-cols-3 gap-12 p-9 justify-center">
         {selected === 'all'
           ? projectDetails !== null &&
-            projectDetails.map((e) => {
+            projectDetails.map((selectedProject) => {
               return (
                 // eslint-disable-next-line no-underscore-dangle
                 // eslint-disable-next-line jsx-a11y/no-static-element-interactions
                 <div
                   // eslint-disable-next-line no-underscore-dangle
-                  key={e._id}
+                  key={selectedProject._id}
                   // eslint-disable-next-line no-underscore-dangle
                   onClick={() => {
-                    handleClick(e);
+                    handleClick(selectedProject);
                   }}
                   onKeyDown={handleClick}
                 >
                   <ProjectCard
-                    title={e.title}
+                    title={selectedProject.title}
                     image={image}
-                    description={e.description}
+                    description={selectedProject.description}
                   />
                 </div>
               );
             })
           : specificCategoryProjects !== null &&
-            specificCategoryProjects.map((e) => {
+            specificCategoryProjects.map((selectedProject) => {
               return (
                 // eslint-disable-next-line no-underscore-dangle
                 // eslint-disable-next-line jsx-a11y/no-static-element-interactions
                 <div
                   // eslint-disable-next-line no-underscore-dangle
-                  key={e._id}
+                  key={selectedProject._id}
                   // eslint-disable-next-line no-underscore-dangle
                   onClick={() => {
-                    handleClick(e);
+                    handleClick(selectedProject);
                   }}
                   onKeyDown={handleClick}
                 >
                   <ProjectCard
-                    title={e.title}
+                    title={selectedProject.title}
                     image={image}
-                    description={e.description}
+                    description={selectedProject.description}
                   />
                 </div>
               );
