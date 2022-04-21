@@ -24,6 +24,11 @@ function Projects() {
     dispatch(fetchSpecificCategory(selected));
   }, [dispatch, selected]);
 
+  const handleClick = (project) => {
+    // eslint-disable-next-line no-underscore-dangle
+    return console.log(project._id);
+  };
+
   return (
     <div>
       <ProjectsTypes setSelected={setSelected} />
@@ -33,7 +38,16 @@ function Projects() {
             projectDetails.map((e) => {
               return (
                 // eslint-disable-next-line no-underscore-dangle
-                <div key={e._id}>
+                // eslint-disable-next-line jsx-a11y/no-static-element-interactions
+                <div
+                  // eslint-disable-next-line no-underscore-dangle
+                  key={e._id}
+                  // eslint-disable-next-line no-underscore-dangle
+                  onClick={() => {
+                    handleClick(e);
+                  }}
+                  onKeyDown={handleClick}
+                >
                   <ProjectCard
                     title={e.title}
                     image={image}
@@ -46,7 +60,16 @@ function Projects() {
             specificCategoryProjects.map((e) => {
               return (
                 // eslint-disable-next-line no-underscore-dangle
-                <div key={e._id}>
+                // eslint-disable-next-line jsx-a11y/no-static-element-interactions
+                <div
+                  // eslint-disable-next-line no-underscore-dangle
+                  key={e._id}
+                  // eslint-disable-next-line no-underscore-dangle
+                  onClick={() => {
+                    handleClick(e);
+                  }}
+                  onKeyDown={handleClick}
+                >
                   <ProjectCard
                     title={e.title}
                     image={image}
