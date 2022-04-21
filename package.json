@@ -19,6 +19,7 @@
     "react-redux": "^7.2.3",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.0",
+    "tw-elements": "^1.0.0-alpha12",
     "yup": "^0.32.11"
   },
   "scripts": {
