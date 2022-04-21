@@ -14,6 +14,7 @@ module.exports = {
         xxlnav: { min: '1359px' }, // Desktop widescreen.
       },
       colors: {
+        main: '#FCFCFC',
         primary: '#6A2C70',
         secondary: '#FEEEEE',
         gray: '#878787',
