@@ -41,8 +41,8 @@ export default function SelectedProject({ selectedProjectId }) {
           <hr className="w-3/4 mb-2" />
           <h1 className="mb-4">
             Created at:{' '}
-            {selectedProjectDetails.createdAt
-              .replace(/T/, ' ')
+            {selectedProjectDetails?.createdAt
+              ?.replace(/T/, ' ')
               .replace(/\..+/, '')
               .slice(0, 16)}
           </h1>
@@ -81,8 +81,8 @@ export default function SelectedProject({ selectedProjectId }) {
                     <h1 className="font-semibold mb-3">{e._id} donated $100</h1>
                     <h1 className="mb-3">{e.content}</h1>
                     <h1>
-                      {e.createdAt
-                        .replace(/T/, ' ')
+                      {e?.createdAt
+                        ?.replace(/T/, ' ')
                         .replace(/\..+/, '')
                         .slice(0, 16)}
                     </h1>
