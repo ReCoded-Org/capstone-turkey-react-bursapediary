@@ -5,7 +5,8 @@ export const userSlice = createSlice({
   initialState: {
     currentUser: null,
     isLoading: false,
-    isSuccess: false,
+    isSuccessLogin: false,
+    isSuccessRegister: false,
     isError: false,
   },
 
@@ -13,34 +14,33 @@ export const userSlice = createSlice({
     loginStart: (state) => {
       state.isLoading = true;
       state.isError = false;
-      state.isSuccess = false;
+      state.isSuccessLogin = false;
     },
     loginSuccess: (state, action) => {
       state.isLoading = false;
       state.currentUser = action.payload;
       state.isError = false;
-      state.isSuccess = true;
+      state.isSuccessLogin = true;
     },
     loginFailure: (state) => {
       state.isLoading = false;
       state.isError = true;
-      state.isSuccess = false;
+      state.isSuccessLogin = false;
     },
     registerStart: (state) => {
       state.isLoading = true;
       state.isError = false;
-      state.isSuccess = false;
+      state.isSuccessRegister = false;
     },
-    registerSuccess: (state, action) => {
+    registerSuccess: (state) => {
       state.isLoading = false;
-      state.currentUser = action.payload;
       state.isError = false;
-      state.isSuccess = true;
+      state.isSuccessRegister = true;
     },
     registerFailure: (state) => {
       state.isLoading = false;
       state.isError = true;
-      state.isSuccess = false;
+      state.isSuccessRegister = false;
     },
   },
 });

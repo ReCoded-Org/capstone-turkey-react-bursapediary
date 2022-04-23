@@ -1,12 +1,20 @@
 import { Formik, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { register } from '../../features/user/userAPI';
 
 function SignUpForm() {
   const dispatch = useDispatch();
-
+  const { isSuccessRegister } = useSelector((state) => state.user);
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (isSuccessRegister) {
+      navigate('/signin');
+    }
+  }, [isSuccessRegister, navigate]);
   return (
     <Formik
       onSubmit={(values, { setSubmitting }) => {

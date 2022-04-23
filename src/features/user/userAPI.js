@@ -22,11 +22,8 @@ const login = async (dispatch, user) => {
 const register = async (dispatch, user) => {
   dispatch(registerStart());
   try {
-    const res = await axios.post(
-      'https://bursapediary.com/users/register',
-      user,
-    );
-    dispatch(registerSuccess(res.data));
+    await axios.post('https://bursapediary.com/users/register', user);
+    dispatch(registerSuccess());
   } catch (error) {
     dispatch(registerFailure());
   }

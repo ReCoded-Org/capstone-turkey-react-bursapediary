@@ -1,12 +1,20 @@
 import { Formik, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { login } from '../../features/user/userAPI';
 
 function SignInForm() {
   const dispatch = useDispatch();
-
+  const { currentUser } = useSelector((state) => state.user);
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (currentUser) {
+      navigate('/');
+    }
+  }, [currentUser, navigate]);
   return (
     <Formik
       onSubmit={(values, { setSubmitting }) => {
