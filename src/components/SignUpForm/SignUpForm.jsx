@@ -1,43 +1,76 @@
 import { Formik, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+
+import { register } from '../../features/user/userAPI';
+
+import { SIGN_IN_ROUTE } from '../../routes';
 
 function SignUpForm() {
+  const dispatch = useDispatch();
+  const { isSuccessRegister } = useSelector((state) => state.user);
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (isSuccessRegister) {
+      navigate(SIGN_IN_ROUTE);
+    }
+  }, [isSuccessRegister, navigate]);
   return (
     <Formik
-      initialValues={{ email: '', password: '', name: '' }}
+      onSubmit={(values, { setSubmitting }) => {
+        register(dispatch, values);
+        setSubmitting(false);
+      }}
+      initialValues={{
+        email: '',
+        password: '',
+        confirmPassword: '',
+        username: '',
+      }}
       validationSchema={Yup.object().shape({
         email: Yup.string()
           .email('*Email is invalid')
           .required('*Email is required'),
         password: Yup.string().required('*Password is required'),
-        name: Yup.string().required('*Full name is required'),
+        username: Yup.string().required('*Username is required'),
+        confirmPassword: Yup.string()
+          .required('*Confirm password is required')
+          .when('password', {
+            is: (val) => !!(val && val.length > 0),
+            then: Yup.string().oneOf(
+              [Yup.ref('password')],
+              '*Passwords must be same',
+            ),
+          }),
       })}
     >
       {({ values, isSubmitting, handleChange, handleBlur, handleSubmit }) => {
         return (
           <form onSubmit={handleSubmit}>
-            <div className="mb-8">
+            <div className="mb-6">
               <label
                 className="block text-[#6A2C70] text-md font-bold mb-2"
-                htmlFor="name"
+                htmlFor="username"
               >
-                Full Name
+                Username
                 <input
                   className="leading-tight border-1 shadow appearance-none border rounded w-full py-2 px-3  text-gray-700 outline outline-1 focus:shadow-outline"
-                  id="name"
-                  type="name"
-                  value={values.name}
+                  id="username"
+                  type="text"
+                  value={values.username}
                   onChange={handleChange}
                   onBlur={handleBlur}
                 />
                 <ErrorMessage
-                  name="name"
+                  name="username"
                   component="div"
                   className="text-red-500 text-xs italic absolute"
                 />
               </label>
             </div>
-            <div className="mb-8">
+            <div className="mb-6">
               <label
                 className="block text-[#6A2C70] text-md font-bold mb-2"
                 htmlFor="email"
@@ -58,7 +91,7 @@ function SignUpForm() {
                 />
               </label>
             </div>
-            <div className="mb-1 pb-4">
+            <div className="mb-6">
               <label
                 className="block text-[#6A2C70] text-md font-bold mb-4"
                 htmlFor="password"
@@ -74,6 +107,27 @@ function SignUpForm() {
                 />
                 <ErrorMessage
                   name="password"
+                  component="div"
+                  className="text-red-500 text-xs italic absolute"
+                />
+              </label>
+            </div>
+            <div className="mb-1 pb-4">
+              <label
+                className="block text-[#6A2C70] text-md font-bold mb-4"
+                htmlFor="confirmPassword"
+              >
+                Confirm Password
+                <input
+                  className="leading-tight shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 outline outline-1  focus:shadow-outline"
+                  id="confirmPassword"
+                  type="password"
+                  value={values.confirmPassword}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                />
+                <ErrorMessage
+                  name="confirmPassword"
                   component="div"
                   className="text-red-500 text-xs italic absolute"
                 />

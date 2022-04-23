@@ -1,14 +1,29 @@
 import { Formik, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { HOME_ROUTE } from '../../routes';
+import { login } from '../../features/user/userAPI';
 
 function SignInForm() {
+  const dispatch = useDispatch();
+  const { currentUser } = useSelector((state) => state.user);
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (currentUser) {
+      navigate(HOME_ROUTE);
+    }
+  }, [currentUser, navigate]);
   return (
     <Formik
-      initialValues={{ email: '', password: '' }}
+      onSubmit={(values, { setSubmitting }) => {
+        login(dispatch, values);
+        setSubmitting(false);
+      }}
+      initialValues={{ username: '', password: '' }}
       validationSchema={Yup.object().shape({
-        email: Yup.string()
-          .email('*Email is invalid')
-          .required('*Email is required'),
+        username: Yup.string().required('*Username is required'),
         password: Yup.string().required('*Password is required'),
       })}
     >
@@ -18,20 +33,20 @@ function SignInForm() {
             <div className="mb-8">
               <label
                 className="block text-[#6A2C70] text-md font-bold mb-2"
-                htmlFor="email"
+                htmlFor="username"
               >
-                Email
+                Username
                 <input
                   className="leading-tight border-1 shadow appearance-none border rounded w-full py-2 px-3  text-gray-700 outline outline-1 focus:shadow-outline"
-                  id="email"
-                  type="email"
-                  value={values.email}
+                  id="username"
+                  type="text"
+                  value={values.username}
                   onChange={handleChange}
                   onBlur={handleBlur}
                 />
                 <ErrorMessage
-                  data-testid="emailError"
-                  name="email"
+                  data-testid="usernameError"
+                  name="username"
                   component="div"
                   className="text-red-500 text-xs italic absolute"
                 />
@@ -52,7 +67,7 @@ function SignInForm() {
                   onBlur={handleBlur}
                 />
                 <ErrorMessage
-                  data-testid="emailError"
+                  data-testid="usernameError"
                   name="password"
                   component="div"
                   className="text-red-500 text-xs italic absolute"
