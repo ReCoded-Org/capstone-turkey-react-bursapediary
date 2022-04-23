@@ -3,11 +3,13 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { BrowserRouter as Router } from 'react-router-dom';
-
+import { ToastContainer } from 'react-toastify';
 import App from './App';
 import { store, persistor } from './app/store';
-import './index.css';
 import * as serviceWorker from './serviceWorker';
+// required to work properly within the App
+import './index.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,6 +18,7 @@ ReactDOM.render(
         <Router>
           <App />
         </Router>
+        <ToastContainer />
       </PersistGate>
     </Provider>
   </React.StrictMode>,
