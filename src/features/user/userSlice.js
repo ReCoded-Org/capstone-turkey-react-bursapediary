@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 export const userSlice = createSlice({
   name: 'user',
   initialState: {
-    currentUser: null,
+    currentUser: null, // it will include username, id and token as an object
     isLoading: false,
     isSuccessLogin: false,
     isSuccessRegister: false,
