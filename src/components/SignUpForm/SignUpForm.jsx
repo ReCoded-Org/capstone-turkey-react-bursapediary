@@ -5,18 +5,20 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { register } from '../../features/user/userAPI';
-
-import { SIGN_IN_ROUTE } from '../../routes';
+import { SIGN_IN_ROUTE, HOME_ROUTE } from '../../routes';
 
 function SignUpForm() {
   const dispatch = useDispatch();
-  const { isSuccessRegister } = useSelector((state) => state.user);
+  const { isSuccessRegister, currentUser } = useSelector((state) => state.user);
   const navigate = useNavigate();
   useEffect(() => {
     if (isSuccessRegister) {
       navigate(SIGN_IN_ROUTE);
     }
-  }, [isSuccessRegister, navigate]);
+    if (currentUser) {
+      navigate(HOME_ROUTE);
+    }
+  }, [isSuccessRegister, currentUser, navigate]);
   return (
     <Formik
       onSubmit={(values, { setSubmitting }) => {
