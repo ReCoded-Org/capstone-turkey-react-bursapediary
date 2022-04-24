@@ -11,7 +11,9 @@ import {
   AiFillHeart,
 } from 'react-icons/ai';
 import { fetchSelectedProjectDetails } from './selectedProjectSlice';
+import { postReview } from './reviewSlice';
 import image from '../../assets/images/featuredProjectImg.png';
+import ReviewInput from '../../components/Projects/ReviewInput';
 
 export default function SelectedProject({ selectedProjectId }) {
   const selectedProjectDetails = useSelector(
@@ -22,6 +24,13 @@ export default function SelectedProject({ selectedProjectId }) {
   useEffect(() => {
     dispatch(fetchSelectedProjectDetails(selectedProjectId));
   }, [dispatch, selectedProjectId]);
+
+  function handleReviewSubmit(content) {
+    // eslint-disable-next-line object-shorthand
+    const obj = { projectId: selectedProjectId, content: content };
+
+    dispatch(postReview(obj));
+  }
 
   return (
     selectedProjectDetails && (
@@ -72,7 +81,7 @@ export default function SelectedProject({ selectedProjectId }) {
             </div>
           </div>
           <div className="bg-secondary w-full mt-6">
-            <h1 className="text-2xl font-bold p-4">Comments</h1>
+            <h1 className="text-2xl font-bold p-4">Reviews</h1>
             {selectedProjectDetails?.reviews?.map((e) => {
               return (
                 <div className="flex flex-row p-4">
@@ -90,6 +99,7 @@ export default function SelectedProject({ selectedProjectId }) {
                 </div>
               );
             })}
+            <ReviewInput onReviewSubmit={(e) => handleReviewSubmit(e)} />
           </div>
         </div>
         <div className="p-5">
