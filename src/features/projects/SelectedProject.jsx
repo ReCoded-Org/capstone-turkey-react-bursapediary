@@ -94,7 +94,8 @@ export default function SelectedProject({ selectedProjectId }) {
         </div>
         <div className="p-5">
           <h1 className="font-bold text-2xl">
-            $68.448 USD raised of $123.457.000 goal
+            ${selectedProjectDetails.collectedAmount} raised of $
+            {selectedProjectDetails.amount} goal
           </h1>
           <h1 className="text-gray mt-2">12 people donated to this project</h1>
           <div className="flex flex-row mt-2">
