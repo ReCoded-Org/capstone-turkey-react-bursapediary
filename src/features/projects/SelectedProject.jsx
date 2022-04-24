@@ -73,7 +73,7 @@ export default function SelectedProject({ selectedProjectId }) {
           </div>
           <div className="bg-secondary w-full mt-6">
             <h1 className="text-2xl font-bold p-4">Comments</h1>
-            {selectedProjectDetails?.comments?.map((e) => {
+            {selectedProjectDetails?.reviews?.map((e) => {
               return (
                 <div className="flex flex-row p-4">
                   <AiOutlineUser className="w-4 h-4 mr-2" />
