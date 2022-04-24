@@ -42,6 +42,13 @@ export const userSlice = createSlice({
       state.isError = true;
       state.isSuccessRegister = false;
     },
+    cleanState: (state) => {
+      state.currentUser = null;
+      state.isLoading = false;
+      state.isSuccessLogin = false;
+      state.isSuccessRegister = false;
+      state.isError = false;
+    },
   },
 });
 
@@ -53,6 +60,7 @@ export const {
   registerStart,
   registerSuccess,
   registerFailure,
+  cleanState,
 } = userSlice.actions;
 
 export default userSlice.reducer;

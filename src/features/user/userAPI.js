@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { toast } from 'react-toastify';
-
+import { persistor } from '../../app/store';
 import {
   loginStart,
   loginSuccess,
@@ -8,6 +8,7 @@ import {
   registerStart,
   registerSuccess,
   registerFailure,
+  cleanState,
 } from './userSlice';
 
 const showErrorMessage = (error) => {
@@ -59,4 +60,12 @@ const register = async (dispatch, user) => {
     dispatch(registerFailure());
   }
 };
-export { login, register };
+
+const logout = async (dispatch) => {
+  dispatch(cleanState()); // makes the state as initial
+  await persistor.purge();
+  toast.success('Logout successfully', {
+    position: toast.POSITION.TOP_RIGHT,
+  });
+};
+export { login, register, logout };

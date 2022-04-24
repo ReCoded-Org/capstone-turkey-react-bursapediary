@@ -1,5 +1,5 @@
 import { AiOutlineGlobal } from 'react-icons/ai';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import LanguageDropdown from '../LanguageDropdown/LanguageDropdown';
 import {
@@ -12,12 +12,15 @@ import {
   FAQ_ROUTE,
 } from '../../../routes';
 
+import { logout } from '../../../features/user/userAPI';
+
 function Navbar() {
+  const dispatch = useDispatch();
   const user = useSelector((state) => state.user.currentUser);
 
   const navigate = useNavigate();
   const signOut = () => {
-    // add logout logic with redux-persist
+    logout(dispatch);
     navigate(HOME_ROUTE);
   };
 
