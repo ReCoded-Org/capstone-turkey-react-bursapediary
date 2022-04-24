@@ -9,11 +9,9 @@ import { fetchProjects } from './projectsSlice';
 import { fetchSpecificCategory } from './categorySlice';
 import image from '../../assets/images/featuredProjectImg.png';
 import ProjectsTypes from '../../components/Projects/ProjectsTypes';
-// import SelectedProject from './SelectedProject';
 
 function Projects() {
   const [selected, setSelected] = useState('');
-  // const [selectedProjectId, setSelectedProjectId] = useState('');
 
   const projectDetails = useSelector((state) => state.projects.entities);
 
@@ -30,11 +28,6 @@ function Projects() {
   useEffect(() => {
     dispatch(fetchSpecificCategory(selected));
   }, [dispatch, selected]);
-
-  // const handleClick = (project) => {
-  //   // eslint-disable-next-line no-underscore-dangle
-  //   return setSelectedProjectId(project._id);
-  // };
 
   return (
     <div>
@@ -76,9 +69,6 @@ function Projects() {
               );
             })}
       </div>
-      {/* {selectedProjectId && (
-        <SelectedProject selectedProjectId={selectedProjectId} />
-      )} */}
     </div>
   );
 }
