@@ -1,7 +1,8 @@
 /* eslint-disable no-underscore-dangle */
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { useParams } from 'react-router-dom';
 
 import {
   AiOutlineUser,
@@ -15,19 +16,20 @@ import { postReview } from './reviewSlice';
 import image from '../../assets/images/featuredProjectImg.png';
 import ReviewInput from '../../components/Projects/ReviewInput';
 
-export default function SelectedProject({ selectedProjectId }) {
+export default function SelectedProject() {
+  const { id } = useParams();
   const selectedProjectDetails = useSelector(
     (state) => state.selectedProjectDetails.entities,
   );
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchSelectedProjectDetails(selectedProjectId));
-  }, [dispatch, selectedProjectId]);
+    dispatch(fetchSelectedProjectDetails(id));
+  }, [dispatch, id]);
 
   function handleReviewSubmit(content) {
     // eslint-disable-next-line object-shorthand
-    const obj = { projectId: selectedProjectId, content: content };
+    const obj = { projectId: id, content: content };
 
     dispatch(postReview(obj));
   }
@@ -179,6 +181,6 @@ export default function SelectedProject({ selectedProjectId }) {
   );
 }
 
-SelectedProject.propTypes = {
-  selectedProjectId: PropTypes.string.isRequired,
-};
+// SelectedProject.propTypes = {
+//   selectedProjectId: PropTypes.string.isRequired,
+// };

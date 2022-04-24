@@ -1,16 +1,19 @@
+/* eslint-disable no-underscore-dangle */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
 import { fetchProjects } from './projectsSlice';
 import { fetchSpecificCategory } from './categorySlice';
 import image from '../../assets/images/featuredProjectImg.png';
 import ProjectsTypes from '../../components/Projects/ProjectsTypes';
-import SelectedProject from './SelectedProject';
+// import SelectedProject from './SelectedProject';
 
 function Projects() {
   const [selected, setSelected] = useState('');
-  const [selectedProjectId, setSelectedProjectId] = useState('');
+  // const [selectedProjectId, setSelectedProjectId] = useState('');
 
   const projectDetails = useSelector((state) => state.projects.entities);
 
@@ -28,10 +31,10 @@ function Projects() {
     dispatch(fetchSpecificCategory(selected));
   }, [dispatch, selected]);
 
-  const handleClick = (project) => {
-    // eslint-disable-next-line no-underscore-dangle
-    return setSelectedProjectId(project._id);
-  };
+  // const handleClick = (project) => {
+  //   // eslint-disable-next-line no-underscore-dangle
+  //   return setSelectedProjectId(project._id);
+  // };
 
   return (
     <div>
@@ -41,47 +44,41 @@ function Projects() {
           ? projectDetails !== null &&
             projectDetails.map((e) => {
               return (
-                // eslint-disable-next-line jsx-a11y/no-static-element-interactions
-                <div
-                  // eslint-disable-next-line no-underscore-dangle
+                <Link
                   key={e._id}
-                  onClick={() => {
-                    handleClick(e);
-                  }}
-                  onKeyDown={handleClick}
+                  to={`/project/${e._id}`}
+                  // onKeyDown={handleClick}
                 >
                   <ProjectCard
                     title={e.title}
                     image={image}
                     description={e.description}
                   />
-                </div>
+                </Link>
               );
             })
           : specificCategoryProjects !== null &&
             specificCategoryProjects.map((e) => {
               return (
                 // eslint-disable-next-line jsx-a11y/no-static-element-interactions
-                <div
+                <Link
                   // eslint-disable-next-line no-underscore-dangle
                   key={e._id}
-                  onClick={() => {
-                    handleClick(e);
-                  }}
-                  onKeyDown={handleClick}
+                  to={`/project/${e._id}`}
+                  // onKeyDown={handleClick}
                 >
                   <ProjectCard
                     title={e.title}
                     image={image}
                     description={e.description}
                   />
-                </div>
+                </Link>
               );
             })}
       </div>
-      {selectedProjectId && (
+      {/* {selectedProjectId && (
         <SelectedProject selectedProjectId={selectedProjectId} />
-      )}
+      )} */}
     </div>
   );
 }
