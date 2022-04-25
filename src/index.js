@@ -4,6 +4,8 @@ import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
+import 'tw-elements';
+
 import App from './App';
 import { store, persistor } from './app/store';
 import * as serviceWorker from './serviceWorker';
