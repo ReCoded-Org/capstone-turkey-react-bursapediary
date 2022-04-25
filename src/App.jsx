@@ -7,7 +7,15 @@ import Footer from './components/Footer/Footer';
 
 import SignUpPage from './pages/SignUpPage/SignUpPage';
 import SignInPage from './pages/SignInPage/SignInPage';
-import { SIGN_UP_ROUTE, SIGN_IN_ROUTE, HOME_ROUTE } from './routes';
+import FaqPage from './pages/FAQ/FaqPage';
+import ContactUs from './pages/ContactUsPage/ContactUs';
+import {
+  SIGN_UP_ROUTE,
+  SIGN_IN_ROUTE,
+  HOME_ROUTE,
+  FAQ_ROUTE,
+  CONTACT_ROUTE,
+} from './routes';
 
 function App() {
   const { currentUser } = useSelector((state) => state.user);
@@ -16,6 +24,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path={HOME_ROUTE} element={<Home />} />
+        <Route path={FAQ_ROUTE} element={<FaqPage />} />
+        <Route path={CONTACT_ROUTE} element={<ContactUs />} />
         <Route
           path={SIGN_UP_ROUTE}
           element={currentUser ? <Navigate to={HOME_ROUTE} /> : <SignUpPage />}
