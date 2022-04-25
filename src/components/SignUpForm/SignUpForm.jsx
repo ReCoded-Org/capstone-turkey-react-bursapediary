@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { register } from '../../features/user/userAPI';
-import { SIGN_IN_ROUTE, HOME_ROUTE } from '../../routes';
+import { SIGN_IN_ROUTE } from '../../routes';
 
 function SignUpForm() {
   const dispatch = useDispatch();
@@ -14,9 +14,6 @@ function SignUpForm() {
   useEffect(() => {
     if (isSuccessRegister) {
       navigate(SIGN_IN_ROUTE);
-    }
-    if (currentUser) {
-      navigate(HOME_ROUTE);
     }
   }, [isSuccessRegister, currentUser, navigate]);
   return (
