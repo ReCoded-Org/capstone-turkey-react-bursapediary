@@ -36,7 +36,7 @@ export default function SelectedProject() {
 
   return (
     selectedProjectDetails && (
-      <div className="grid grid-1 grid-cols-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 ">
+      <div className="grid grid-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 ">
         <div className="p-5">
           <p className="text-2xl font-bold mb-2">
             {selectedProjectDetails?.title}
