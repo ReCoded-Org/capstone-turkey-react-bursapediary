@@ -2,7 +2,7 @@ import TeamCard from '../../components/AboutUs/TeamCard';
 
 function AboutUs() {
   return (
-    <div>
+    <div data-testid="AboutUs-Page">
       <section className="my-4 py-8 ">
         <h1 className="text-5xl text-center mb-6 xsnav:text-4xl text-primary  ">
           About Us
