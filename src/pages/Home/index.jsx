@@ -4,6 +4,7 @@ import {
   FeaturedProjects,
   ProjectCard,
   Slider,
+  AboutUs,
 } from './components';
 import { TRANSATION_MAIN_TEXT, TRANSATION_SUB_TEXT } from './constants';
 import { MOCKED_PROJECTS, MOCKED_REVIEWS } from './data/index';
@@ -28,6 +29,7 @@ function Home() {
         ))}
       </FeaturedProjects>
       <Slider items={MOCKED_REVIEWS} />
+      <AboutUs />
     </div>
   );
 }

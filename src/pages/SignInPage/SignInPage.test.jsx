@@ -1,4 +1,4 @@
-import { render, cleanup } from '@testing-library/react';
+import { render, cleanup } from '../../testUtils';
 
 import SignInPage from './SignInPage';
 

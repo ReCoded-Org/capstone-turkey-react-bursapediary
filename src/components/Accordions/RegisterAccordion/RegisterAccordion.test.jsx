@@ -1,4 +1,4 @@
-import { render, cleanup } from '@testing-library/react';
+import { render, cleanup } from '../../../testUtils';
 import RegisterAccordion from './RegisterAccordion';
 
 describe('FAQ Page', () => {

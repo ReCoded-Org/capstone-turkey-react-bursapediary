@@ -1,4 +1,4 @@
-import { render, cleanup, fireEvent } from '@testing-library/react';
+import { render, cleanup, fireEvent } from '../../testUtils';
 
 import Slider from './Slider';
 import { MOCKED_REVIEWS } from '../../pages/Home/data/index';
