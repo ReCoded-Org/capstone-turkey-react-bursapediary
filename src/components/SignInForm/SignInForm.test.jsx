@@ -1,15 +1,8 @@
-import '@testing-library/jest-dom/extend-expect';
-import { render, fireEvent, screen } from '@testing-library/react';
-import { Provider } from 'react-redux';
+import { render, fireEvent, screen } from '../../testUtils';
 
 import SignInForm from './SignInForm';
-import { store } from '../../app/store';
 
-const { getByText } = render(
-  <Provider store={store}>
-    <SignInForm />
-  </Provider>,
-);
+const { getByText } = render(<SignInForm />);
 
 it('should show validation on blur', async () => {
   const input = getByText('Login');

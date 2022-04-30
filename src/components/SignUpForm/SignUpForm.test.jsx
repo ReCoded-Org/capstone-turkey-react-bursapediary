@@ -1,18 +1,8 @@
-import '@testing-library/jest-dom/extend-expect';
-import { render, fireEvent, screen } from '@testing-library/react';
-import { Provider } from 'react-redux';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { render, screen, fireEvent } from '../../testUtils';
 
 import SignUpForm from './SignUpForm';
-import { store } from '../../app/store';
 
-const { getByText } = render(
-  <Router>
-    <Provider store={store}>
-      <SignUpForm />
-    </Provider>
-  </Router>,
-);
+const { getByText } = render(<SignUpForm />);
 it('should show validation on blur', async () => {
   const input = getByText('Sign Up');
   fireEvent.click(input);

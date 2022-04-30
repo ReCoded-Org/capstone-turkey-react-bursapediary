@@ -1,4 +1,5 @@
-import { render, cleanup } from '@testing-library/react';
+import { render, cleanup } from '../../testUtils';
+
 import Footer from './Footer';
 
 describe('Footer', () => {

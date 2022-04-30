@@ -1,5 +1,5 @@
 import { render, cleanup } from '@testing-library/react';
-import '@testing-library/jest-dom';
+
 import LanguageDropdown from './LanguageDropdown';
 
 describe('LanguageDropdown', () => {

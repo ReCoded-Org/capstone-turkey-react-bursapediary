@@ -1,4 +1,4 @@
-import { render, cleanup } from '@testing-library/react';
+import { render, cleanup } from '../../testUtils';
 
 import ProjectCard from './ProjectCard';
 import FeaturedProjectImg from '../../assets/images/featuredProjectImg.png';
