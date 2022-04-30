@@ -11,7 +11,7 @@ import Teoman from '../../assets/images/Teoman.png';
 
 function TeamCard() {
   return (
-    <div className="my-4 py-8 bg-main">
+    <div className="my-4 py-8 bg-main" data-testid="teamcard-component">
       <h1 className="text-5xl text-center mb-10 xsnav:text-4xl">Our Team</h1>
       <p className="text-3xl text-center mb-20 mdnav:text-2xl smnav:text-xl xsnav:text-xl">
         Meet the people behind the idea
