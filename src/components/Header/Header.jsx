@@ -1,17 +1,20 @@
 import { useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
+
 import mainHero from '../../assets/images/main-hero.svg';
 import {
-  HOME_PAGE_TITLE,
   HOME_INFORMATION_TEXT,
   HOME_ACTION_BUTTON_TEXT,
 } from '../../pages/Home/constants';
 
 function Information() {
   const user = useSelector((state) => state.user.currentUser);
+  const { t } = useTranslation();
+
   return (
     <div className=" flex flex-col flex-auto w-full sm:w-32 gap-5 justify-center lg:px-20 md:px-10 sm:px-8">
       <h1 className="text-primary font-bold  text-base lg:text-4xl md:text-2xl sm:text-xl text-center sm:text-left">
-        {HOME_PAGE_TITLE}
+        {t('homepage.title')}
       </h1>
       <p className="leading-normal sm:leading-loose text-gray text-sm lg:text-lg  md:text-base sm:text-sm  ">
         {HOME_INFORMATION_TEXT}

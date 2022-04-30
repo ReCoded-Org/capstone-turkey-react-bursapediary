@@ -1,6 +1,8 @@
 import { AiOutlineGlobal } from 'react-icons/ai';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+
 import LanguageDropdown from '../LanguageDropdown/LanguageDropdown';
 import {
   HOME_ROUTE,
@@ -15,6 +17,7 @@ import {
 import { logout } from '../../../features/user/userAPI';
 
 function Navbar() {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user.currentUser);
 
@@ -76,7 +79,7 @@ function Navbar() {
                   data-mdb-ripple="true"
                   data-mdb-ripple-color="light"
                 >
-                  Home
+                  {t('navbar.home')}
                 </Link>
               </li>
               <li className="nav-item">
@@ -86,7 +89,7 @@ function Navbar() {
                   data-mdb-ripple="true"
                   data-mdb-ripple-color="light"
                 >
-                  Projects
+                  {t('navbar.projects')}
                 </Link>
               </li>
               <li className="nav-item">
@@ -96,7 +99,7 @@ function Navbar() {
                   data-mdb-ripple="true"
                   data-mdb-ripple-color="light"
                 >
-                  FAQ
+                  {t('navbar.faq')}
                 </Link>
               </li>
               <li className="nav-item ">
@@ -106,7 +109,7 @@ function Navbar() {
                   data-mdb-ripple="true"
                   data-mdb-ripple-color="light"
                 >
-                  About
+                  {t('navbar.about')}
                 </Link>
               </li>
               <li className="nav-item">
@@ -116,7 +119,7 @@ function Navbar() {
                   data-mdb-ripple="true"
                   data-mdb-ripple-color="light"
                 >
-                  Contact
+                  {t('navbar.contact')}
                 </Link>
               </li>
             </ul>
@@ -133,7 +136,7 @@ function Navbar() {
                       type="button"
                       onClick={() => signOut()}
                     >
-                      Sign Out
+                      {t('auth.signout')}
                     </button>
                   </div>
                 </li>
@@ -147,7 +150,7 @@ function Navbar() {
                         data-mdb-ripple-color="light"
                         type="button"
                       >
-                        Sign Up
+                        {t('auth.signup')}
                       </button>
                     </Link>
                   </li>
@@ -159,7 +162,7 @@ function Navbar() {
                         data-mdb-ripple-color="light"
                         type="button"
                       >
-                        Sign In
+                        {t('auth.signin')}
                       </button>
                     </Link>
                   </li>
