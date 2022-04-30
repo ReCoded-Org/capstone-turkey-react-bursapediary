@@ -1,9 +1,9 @@
-import { render } from '@testing-library/react';
+import { render } from '../../testUtils';
 
-import App from './App';
+import Home from './index';
 
 test('renders Home page', () => {
-  const { getByTestId } = render(<App />);
+  const { getByTestId } = render(<Home />);
   const HomePage = getByTestId('home-page');
   expect(HomePage).toBeInTheDocument();
 });
