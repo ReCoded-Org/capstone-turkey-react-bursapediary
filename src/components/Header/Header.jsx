@@ -2,10 +2,6 @@ import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
 import mainHero from '../../assets/images/main-hero.svg';
-import {
-  HOME_INFORMATION_TEXT,
-  HOME_ACTION_BUTTON_TEXT,
-} from '../../pages/Home/constants';
 
 function Information() {
   const user = useSelector((state) => state.user.currentUser);
@@ -17,14 +13,14 @@ function Information() {
         {t('homepage.title')}
       </h1>
       <p className="leading-normal sm:leading-loose text-gray text-sm lg:text-lg  md:text-base sm:text-sm  ">
-        {HOME_INFORMATION_TEXT}
+        {t('homepage.informationText')}
       </p>
       {!user && (
         <button
           className="w-40 bg-primary hover:bg-primaryHover items-center text-white text-xs lg:text-sm md:text-sm sm:text-xs py-2 px-4 font-semibold rounded focus:outline-none focus:shadow-outline self-center sm:self-auto"
           type="submit"
         >
-          {HOME_ACTION_BUTTON_TEXT}
+          {t('homepage.actionButtonText')}
         </button>
       )}
     </div>

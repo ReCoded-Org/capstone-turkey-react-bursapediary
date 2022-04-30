@@ -1,7 +1,7 @@
 export const HOME_PAGE_TITLE = 'Dreams Will Come True';
 
 export const HOME_INFORMATION_TEXT =
-  'If you are a dreamer who pursue, you can find supporters for your dreams with Bursapediary. If you are a supporter, meet with the dreamers and help their dreams to come true.';
+  'If you have dreams, Bursapediary is a right place for you. Find the support you need for your dreams with Bursapediary. If you are a supporter, meet with the dreamers and help their dreams to come true.';
 
 export const TRANSATION_MAIN_TEXT =
   'With the right organization, you can give a hand true needer';
