@@ -11,7 +11,7 @@ describe('Slider', () => {
   test('should render title correctly', () => {
     const { getByText } = renderSlider();
 
-    const title = getByText(/what our clients say/i);
+    const title = getByText(/what our users say/i);
     expect(title).toBeInTheDocument();
   });
 

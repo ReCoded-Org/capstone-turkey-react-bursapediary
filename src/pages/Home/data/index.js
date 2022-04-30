@@ -60,7 +60,7 @@ const MOCKED_REVIEWS = [
   {
     id: 1,
     review:
-      '"The donation for my digital entrepreneurship helped me start a business. Thanks Bursapediary!"',
+      '"The donations for my digital entrepreneurship helped me start a business. Thanks Bursapediary!"',
     clientName: 'Ahmet Demir',
   },
   {

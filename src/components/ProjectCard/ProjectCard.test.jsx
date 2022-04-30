@@ -56,7 +56,7 @@ describe('ProjectCard', () => {
     const { getByRole } = render(
       <ProjectCard title={TITLE} description={DESCRIPTION} />,
     );
-    const ActionElement = getByRole('link', { name: /start fundraising/i });
+    const ActionElement = getByRole('link', { name: /donate now/i });
     expect(ActionElement).toBeInTheDocument();
   });
 });

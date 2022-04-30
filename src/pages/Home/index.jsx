@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 import {
   Header,
   Transation,
@@ -5,16 +7,17 @@ import {
   ProjectCard,
   Slider,
 } from './components';
-import { TRANSATION_MAIN_TEXT, TRANSATION_SUB_TEXT } from './constants';
-import { MOCKED_PROJECTS, MOCKED_REVIEWS } from './data/index';
+import { MOCKED_PROJECTS } from './data/index';
 
 function Home() {
+  const { t } = useTranslation();
+
   return (
     <div data-testid="home-page">
       <Header />
       <Transation
-        mainText={TRANSATION_MAIN_TEXT}
-        subText={TRANSATION_SUB_TEXT}
+        mainText={t('homepage.transationMainText')}
+        subText={t('homepage.transationSubText')}
       />
       {/* composition */}
       <FeaturedProjects>
@@ -27,7 +30,7 @@ function Home() {
           />
         ))}
       </FeaturedProjects>
-      <Slider items={MOCKED_REVIEWS} />
+      <Slider items={t('homepage.reviews', { returnObjects: true })} />
     </div>
   );
 }

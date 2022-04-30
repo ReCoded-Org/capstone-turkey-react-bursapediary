@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
+import { useTranslation } from 'react-i18next';
 
 import featuredProjectImg from '../../assets/images/featuredProjectImg.png';
 
 function ProjectCard({ title, image, description }) {
+  const { t } = useTranslation();
   return (
     <div
       className="flex flex-col justify-center items-center sm:max-w-sm bg-secondary text-black rounded-lg sm:p-10 p-4"
@@ -20,7 +22,7 @@ function ProjectCard({ title, image, description }) {
         href="#projectdetail"
         className="text-xl text-center leading-4 tracking-wider font-light"
       >
-        Start Fundraising
+        {t('homepage.donateNow')}
       </a>
     </div>
   );
