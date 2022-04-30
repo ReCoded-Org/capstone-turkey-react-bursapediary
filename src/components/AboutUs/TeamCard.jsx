@@ -11,9 +11,9 @@ import Teoman from '../../assets/images/Teoman.png';
 
 function TeamCard() {
   return (
-    <div className="mb-5 mt-5">
-      <h1 className="text-5xl text-center mb-10">Our Team</h1>
-      <p className="text-3xl text-center mb-20">
+    <div className="my-4 py-8 bg-main">
+      <h1 className="text-5xl text-center mb-10 xsnav:text-4xl">Our Team</h1>
+      <p className="text-3xl text-center mb-20 mdnav:text-2xl smnav:text-xl xsnav:text-xl">
         Meet the people behind the idea
       </p>
       <div className="flex flex-wrap justify-center mr-8 ml-8 mb-16">
