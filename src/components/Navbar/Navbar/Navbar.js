@@ -29,7 +29,7 @@ function Navbar() {
   return (
     <header>
       <nav
-        className="navbar navbar-expand-md shadow-md py-2 bg-bgmain relative flex items-center w-full justify-between mb-5"
+        className="navbar navbar-expand-md shadow-md py-2 bg-bgmain relative flex items-center w-full justify-between"
         data-testid="valid-navigation"
       >
         <div className="px-6 w-full flex flex-wrap items-center justify-between">
