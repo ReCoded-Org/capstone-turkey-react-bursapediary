@@ -3,13 +3,12 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 export const postReview = createAsyncThunk(
   'review/postReview',
   async (myData) => {
-    const { projectId, content } = myData;
+    const { projectId, content, token } = myData;
     return fetch(`https://bursapediary.com/projects/${projectId}/reviews`, {
       method: 'post',
       headers: {
         'Content-Type': 'application/json',
-        authorization:
-          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InlhbWFubyIsImVtYWlsIjoicmFuZG9tQGdtYWlsLmNvbSIsInJvbGUiOiJub3JtYWwiLCJ0eXBlIjoibm9ybWFsIiwiaWF0IjoxNjUwODI2ODcyLCJleHAiOjE2NTIwMzY0NzJ9.qQq-TBeZ9xkDgHDnvYdK6z6kWJaLRDAUwMytycyQ_s4',
+        authorization: token,
       },
       body: JSON.stringify({
         content,

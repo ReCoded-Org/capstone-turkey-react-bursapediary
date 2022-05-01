@@ -21,6 +21,9 @@ export default function SelectedProject() {
   const selectedProjectDetails = useSelector(
     (state) => state.selectedProjectDetails.entities,
   );
+
+  const user = useSelector((state) => state.user.currentUser);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -29,8 +32,7 @@ export default function SelectedProject() {
 
   function handleReviewSubmit(content) {
     // eslint-disable-next-line object-shorthand
-    const obj = { projectId: id, content: content };
-
+    const obj = { projectId: id, content: content, token: user.token };
     dispatch(postReview(obj));
   }
 
@@ -88,8 +90,10 @@ export default function SelectedProject() {
               return (
                 <div className="flex flex-row p-4">
                   <AiOutlineUser className="w-4 h-4 mr-2" />
-                  <div>
-                    <h1 className="font-semibold mb-3">{e._id} donated $100</h1>
+                  <div key={e._id}>
+                    <h1 className="font-semibold mb-3">
+                      {user.username} donated $100
+                    </h1>
                     <h1 className="mb-3">{e.content}</h1>
                     <h1>
                       {e?.createdAt
