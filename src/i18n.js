@@ -65,6 +65,29 @@ i18n
             },
             copyRight: '© 2021-2022 Copyright Bursapediary Inc.',
           },
+          contactUs: {
+            title: 'Get in Touch',
+            subText: 'We’d love to hear from you. Let us know how we can help.',
+            form: {
+              name: 'Name:',
+              email: 'Email:',
+              message: 'Message:',
+              placeholderName: 'Enter your name',
+              placeholderEmail: 'Enter your e-mail address',
+              placeholderMessage: 'Enter your message',
+              successToastMsg: 'Your messsage has been sent successfully!',
+              send: 'SEND',
+              errorMessages: {
+                required: '*Required!',
+                invalid:
+                  '*Invalid email address! Please enter your email adress in format: yourname@example.com',
+              },
+            },
+            address: 'ADDRESS',
+            call: 'CALL US',
+            openHours: 'OPEN HOURS',
+            period: 'Monday - Friday 10am-8pm',
+          },
         },
       },
       tr: {
@@ -116,6 +139,30 @@ i18n
               title: 'KONUMLAR',
             },
             copyRight: '© 2021-2022 Telif Hakkı Bursapediary Inc. Aittir.',
+          },
+          contactUs: {
+            title: 'Bağlantıda Kalalım',
+            subText:
+              'Sizden haber almaktan mutluluk duyarız. Nasıl yardım edebileceğimizi bizimle paylaşın.',
+            form: {
+              name: 'İsim:',
+              email: 'Mail:',
+              message: 'Mesaj:',
+              placeholderName: 'İsminizi giriniz.',
+              placeholderEmail: 'Mail adresinizi giriniz',
+              placeholderMessage: 'Mesajınızı giriniz',
+              successToastMsg: 'Mesajınız başarılı bir şekilde gönderildi!',
+              send: 'GÖNDER',
+              errorMessages: {
+                required: '*Gerekli!',
+                invalid:
+                  '*Geçersiz mail adresi! Lütfen mail adresini şu formatta gir: ismin@example.com',
+              },
+            },
+            address: 'ADRES',
+            call: 'BİZİ ARA',
+            openHours: 'AÇIK SAATLER',
+            period: 'Pazartesi - Cuma 10.00-20.00',
           },
         },
       },

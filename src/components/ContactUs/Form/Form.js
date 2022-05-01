@@ -3,8 +3,11 @@ import emailjs from '@emailjs/browser';
 import { Formik } from 'formik';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useTranslation } from 'react-i18next';
 
 function Form() {
+  const { t } = useTranslation();
+
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -17,7 +20,7 @@ function Form() {
       'B2JkePBOzV_nhSmeO',
     );
 
-    toast.success('Your messsage has been sent successfully!', {
+    toast.success(t('contactUs.form.successToastMsg'), {
       position: 'top-right',
       autoClose: 5000,
       hideProgressBar: false,
@@ -38,18 +41,17 @@ function Form() {
       validate={(values) => {
         const errors = {};
         if (!values.name) {
-          errors.name = '*Required!';
+          errors.name = t('contactUs.form.errorMessages.required');
         }
         if (!values.email) {
-          errors.email = '*Required!';
+          errors.email = t('contactUs.form.errorMessages.required');
         } else if (
           !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
         ) {
-          errors.email =
-            '*Invalid email address! Please enter your email adress in format: yourname@example.com';
+          errors.email = t('contactUs.form.errorMessages.invalid');
         }
         if (!values.message) {
-          errors.message = '*Required!';
+          errors.message = t('contactUs.form.errorMessages.required');
         }
         return errors;
       }}
@@ -75,7 +77,9 @@ function Form() {
             data-testid="valid-form"
           >
             <div className="form-group mb-6">
-              <span className="flex justify-start mb-2">Name:</span>
+              <span className="flex justify-start mb-2">
+                {t('contactUs.form.name')}
+              </span>
               <input
                 type="text"
                 name="name"
@@ -83,7 +87,7 @@ function Form() {
                 onChange={handleChange}
                 onBlur={handleBlur}
                 value={values.name}
-                placeholder="Your name..."
+                placeholder={t('contactUs.form.placeholderName')}
                 className="form-control flex
                        w-full
                        px-3
@@ -104,7 +108,9 @@ function Form() {
               )}
             </div>
             <div className="form-group mb-6">
-              <span className="flex justify-start mb-2">Email:</span>
+              <span className="flex justify-start mb-2">
+                {t('contactUs.form.email')}
+              </span>
               <input
                 type="email"
                 name="email"
@@ -112,7 +118,7 @@ function Form() {
                 onChange={handleChange}
                 onBlur={handleBlur}
                 value={values.email}
-                placeholder="Your e-mail address..."
+                placeholder={t('contactUs.form.placeholderEmail')}
                 className="form-control block
                        w-full
                        px-3
@@ -133,7 +139,9 @@ function Form() {
               )}
             </div>
             <div className="form-group mb-6">
-              <span className="flex justify-start mb-2">Message:</span>
+              <span className="flex justify-start mb-2">
+                {t('contactUs.form.message')}
+              </span>
               <textarea
                 name="message"
                 id="message"
@@ -141,7 +149,7 @@ function Form() {
                 onBlur={handleBlur}
                 value={values.message}
                 rows="4"
-                placeholder="Your message..."
+                placeholder={t('contactUs.form.placeholderMessage')}
                 className="form-control
                         block
                         w-full
@@ -180,7 +188,7 @@ function Form() {
                       transition
                       duration-150"
             >
-              SEND
+              {t('contactUs.form.send')}
             </button>
           </form>
           <ToastContainer />
