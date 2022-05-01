@@ -11,6 +11,7 @@ function ReviewInput({ onReviewSubmit }) {
   function handleSubmit(event) {
     event.preventDefault();
     onReviewSubmit(review);
+    setReview('');
   }
 
   return (

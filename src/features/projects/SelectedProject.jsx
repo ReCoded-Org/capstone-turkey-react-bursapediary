@@ -33,7 +33,9 @@ export default function SelectedProject() {
   function handleReviewSubmit(content) {
     // eslint-disable-next-line object-shorthand
     const obj = { projectId: id, content: content, token: user.token };
-    dispatch(postReview(obj));
+    dispatch(postReview(obj)).then(() =>
+      dispatch(fetchSelectedProjectDetails(id)),
+    );
   }
 
   return (
