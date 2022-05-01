@@ -94,14 +94,30 @@ function AddProjectForm() {
                 htmlFor="category"
               >
                 Category
-                <input
-                  className="leading-tight shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 outline outline-1  focus:shadow-outline"
-                  id="category"
-                  type="text"
-                  value={values.confirmPassword}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                />
+                <select
+                  className="form-select appearance-none
+      block
+      w-full
+      px-3
+      py-1.5
+      text-base
+      font-normal
+      text-gray-700
+      bg-clip-padding bg-no-repeat
+      border border-solid
+      rounded
+      transition
+      ease-in-out
+      m-0
+      focus:text-gray-700 focus:bg-white focus:outline-none"
+                  aria-label="Default select example"
+                >
+                  <option value="Cars">Cars</option>
+                  <option value="Education">Education</option>
+                  <option value="Social">Social</option>
+                  <option value="Tech">Tech</option>
+                  <option value="Tech">Stack</option>
+                </select>
                 <ErrorMessage
                   name="category"
                   component="div"
