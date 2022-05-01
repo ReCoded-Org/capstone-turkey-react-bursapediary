@@ -29,27 +29,12 @@ i18n
               'Bursapediary makes it easy and safe for you to give support to local projects anywhere in the world, while providing nonprofits and individuals with the tools, training, and support they need to thrive.',
             sliderTitle: 'What Our Users Says',
             donateNow: 'Donate Now',
+            reviews: {
+              0: '"The funds supported education costs for 10 young girl. Thanks to Bursapediary, girls followed their dreams"',
+              1: '"The donations for my digital entrepreneurship helped me start a business. Thanks Bursapediary!"',
+              2: '"The donations for the forest fire helped us to recover the forest with less damage."',
+            },
           },
-          reviews: [
-            {
-              id: 0,
-              review:
-                '"The funds supported education costs for 10 young girl. Thanks to Bursapediary, girls followed their dreams"',
-              clientName: 'Cristina Watts',
-            },
-            {
-              id: 1,
-              review:
-                '"The donations for my digital entrepreneurship helped me start a business. Thanks Bursapediary!"',
-              clientName: 'Ahmet Demir',
-            },
-            {
-              id: 2,
-              review:
-                '"The donations for the forest fire helped us to recover the forest with less damage."',
-              clientName: 'Josh Turner',
-            },
-          ],
           languages: {
             en: 'English',
             tr: 'Turkish',
@@ -66,6 +51,20 @@ i18n
             signin: 'Sign In',
             signout: 'Sign Out',
           },
+          footer: {
+            contactUs: {
+              title: 'CONTACT US',
+              info: 'If you run a project and seek funding, we can currently support projects. We appreciate your comments, questions and  suggestions. Please use the contact page or send us an email.',
+            },
+            career: {
+              title: 'CAREERS',
+              info: 'Help us make a real difference on a global scale. We are dedicated to our purpose of unlocking the power of funds to enhance quality of life for everyone. Whether you are starting or continuing your career, explore how you can work with us.',
+            },
+            location: {
+              title: 'LOCATIONS',
+            },
+            copyRight: '© 2021-2022 Copyright Bursapediary Inc.',
+          },
         },
       },
       tr: {
@@ -81,29 +80,13 @@ i18n
             transationSubText:
               'Bursapediary, kar amacı gütmeyen kuruluşlara ve bireylere gelişmek için ihtiyaç duydukları araçları, eğitimi ve desteği sağlarken, dünyanın herhangi bir yerindeki yerel projelere destek vermenizi kolay ve güvenli hale getirir.',
             sliderTitle: 'Kullanıcılarımız Ne Diyor',
-            reviews: [
-              {
-                id: 0,
-                review:
-                  '"Fonlar 10 genç kız için eğitim masraflarını destekledi. Bursapediary sayesinde kızlar hayallerinin peşinden gittiler."',
-                clientName: 'Cristina Watts',
-              },
-              {
-                id: 1,
-                review:
-                  '"Dijital girişimciliğim için yapolan bağışlar bir işe başlamama yardımcı oldu. Teşekkürler Bursapediary!"',
-                clientName: 'Ahmet Demir',
-              },
-              {
-                id: 2,
-                review:
-                  '"Orman yangını için yapılan bağışlar ormanı daha az hasarla kurtarmamıza yardımcı oldu."',
-                clientName: 'Josh Turner',
-              },
-            ],
             donateNow: 'Şimdi Bağış Yap',
+            reviews: {
+              0: '"Fonlar 10 genç kız için eğitim masraflarını destekledi. Bursapediary sayesinde kızlar hayallerinin peşinden gittiler."',
+              1: '"Dijital girişimciliğim için yapolan bağışlar bir işe başlamama yardımcı oldu. Teşekkürler Bursapediary!"',
+              2: '"Orman yangını için yapılan bağışlar ormanı daha az hasarla kurtarmamıza yardımcı oldu."',
+            },
           },
-
           languages: {
             en: 'İngilizce',
             tr: 'Türkçe',
@@ -119,6 +102,20 @@ i18n
             signup: 'Kayıt Ol',
             signin: 'Giriş Yap',
             signout: 'Çıkış Yap',
+          },
+          footer: {
+            contactUs: {
+              title: 'BİZİMLE İLETİŞİME GEÇ',
+              info: 'Bir proje yürütüyor ve finansman arıyorsanız, projenizi destekleyebiliriz. Yorumlarınız, sorularınız ve önerileriniz için teşekkür ederiz. Lütfen iletişim sayfasını kullanın veya bize bir e-posta gönderin.',
+            },
+            career: {
+              title: 'KARİYER',
+              info: 'Küresel ölçekte gerçek bir fark yaratmamıza yardımcı olun. Kendimizi herkesin yaşam kalitesini artırmak için bağışların gücünü açığa çıkarma amacına adadık. İster kariyerinize başlıyor ister devam ediyor olun, bizimle nasıl çalışabileceğinizi keşfedin.',
+            },
+            location: {
+              title: 'KONUMLAR',
+            },
+            copyRight: '© 2021-2022 Telif Hakkı Bursapediary Inc. Aittir.',
           },
         },
       },

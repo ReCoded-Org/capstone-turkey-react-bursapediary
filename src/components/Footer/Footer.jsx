@@ -6,7 +6,10 @@ import {
   AiFillHome,
 } from 'react-icons/ai';
 
+import { useTranslation } from 'react-i18next';
+
 function Footer() {
+  const { t } = useTranslation();
   return (
     <div>
       <footer
@@ -27,13 +30,9 @@ function Footer() {
                 text-white
               "
               >
-                CONTACT US
+                {t('footer.contactUs.title')}
               </h6>
-              <p className="text-white mb-5">
-                If you run a project and seek funding, we can currently support
-                projects. We appreciate your comments, questions and
-                suggestions. Please use the contact page or send us an email.
-              </p>
+              <p className="text-white mb-5">{t('footer.contactUs.info')}</p>
               <a href="mailto: hello@bursapediary.com" className="text-white">
                 hello@bursapediary.com
               </a>
@@ -41,18 +40,13 @@ function Footer() {
 
             <div>
               <h6 className="font-semibold mb-4 flex justify-center md:justify-start text-white   ">
-                CAREERS
+                {t('footer.career.title')}
               </h6>
-              <p className="text-white">
-                Help us make a real difference on a global scale. We are
-                dedicated to our purpose of unlocking the power of funds to
-                enhance quality of life for everyone. Whether you are starting
-                or continuing your career, explore how you can work with us.
-              </p>
+              <p className="text-white">{t('footer.career.info')}</p>
             </div>
             <div>
               <h6 className="uppercase font-semibold mb-4 flex justify-center md:justify-center text-white">
-                LOCATIONS
+                {t('footer.location.title')}
               </h6>
 
               <div className="flex justify-center ">
@@ -94,7 +88,7 @@ function Footer() {
             </a>
           </div>
           <span className="text-white font-semibold">
-            © 2021-2022 Copyright Bursapediary Inc.
+            {t('footer.copyRight')}
           </span>
         </div>
       </footer>

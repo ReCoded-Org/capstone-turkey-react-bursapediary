@@ -11,7 +11,23 @@ import { MOCKED_PROJECTS } from './data/index';
 
 function Home() {
   const { t } = useTranslation();
-
+  const reviews = [
+    {
+      id: 0,
+      review: t('homepage.reviews.0'),
+      clientName: 'Cristina Watts',
+    },
+    {
+      id: 1,
+      review: t('homepage.reviews.1'),
+      clientName: 'Ahmet Demir',
+    },
+    {
+      id: 2,
+      review: t('homepage.reviews.2'),
+      clientName: 'Josh Turner',
+    },
+  ];
   return (
     <div data-testid="home-page">
       <Header />
@@ -30,7 +46,7 @@ function Home() {
           />
         ))}
       </FeaturedProjects>
-      <Slider items={t('homepage.reviews', { returnObjects: true })} />
+      <Slider items={reviews} />
     </div>
   );
 }
