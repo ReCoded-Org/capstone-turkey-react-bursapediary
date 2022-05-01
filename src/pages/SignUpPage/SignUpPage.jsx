@@ -1,7 +1,10 @@
+import { useTranslation } from 'react-i18next';
+
 import SignUpForm from '../../components/SignUpForm/SignUpForm';
 import AuthenticationModuleSpan from '../../components/AuthenticationModuleSpan/AuthenticationModuleSpan';
 
 function SignIn() {
+  const { t } = useTranslation();
   return (
     <div className="flex sm:grid h-100 mb-16">
       <div className="flex justify-center w-full sm:grid grid-cols-7 gap-2">
@@ -10,7 +13,7 @@ function SignIn() {
           <div className="flex flex-col items-center justify-center h-screen mx-auto pb-12">
             <div className="w-full max-w-xs">
               <h1 className="text-[#6A2C70] text-4xl font-semibold mb-16 text-center pb-8 pt-12 ">
-                Create Account
+                {t('auth.createAccount')}
               </h1>
               <SignUpForm />
             </div>
