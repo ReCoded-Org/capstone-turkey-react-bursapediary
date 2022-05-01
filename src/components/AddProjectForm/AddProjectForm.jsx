@@ -1,10 +1,27 @@
+import axios from 'axios';
 import { Formik, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+import { useSelector } from 'react-redux';
 
 function AddProjectForm() {
+  const { currentUser } = useSelector((state) => state.user);
+
   return (
     <Formik
       onSubmit={(values, { setSubmitting }) => {
+        const project = {
+          title: values.title,
+          description: values.description,
+          amount: values.amount,
+          owners: [currentUser.id],
+          categories: [values.category],
+        };
+        axios.post('https://bursapediary.com/projects', project, {
+          headers: {
+            authorization: currentUser.token,
+          },
+        });
+
         setSubmitting(false);
       }}
       initialValues={{
@@ -19,7 +36,6 @@ function AddProjectForm() {
         amount: Yup.number('Amount must be number').required(
           '*Amount is required',
         ),
-        category: Yup.string().required('*Category is required'),
       })}
     >
       {({ values, isSubmitting, handleChange, handleBlur, handleSubmit }) => {
@@ -56,7 +72,7 @@ function AddProjectForm() {
                   className="leading-tight border-1 shadow appearance-none border rounded w-full py-2 px-3  text-gray-700 outline outline-1 focus:shadow-outline"
                   id="description"
                   type="text"
-                  value={values.email}
+                  value={values.description}
                   onChange={handleChange}
                   onBlur={handleBlur}
                 />
@@ -77,7 +93,7 @@ function AddProjectForm() {
                   className="leading-tight shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 outline outline-1  focus:shadow-outline"
                   id="amount"
                   type="number"
-                  value={values.password}
+                  value={values.amount}
                   onChange={handleChange}
                   onBlur={handleBlur}
                 />
@@ -95,22 +111,8 @@ function AddProjectForm() {
               >
                 Category
                 <select
-                  className="form-select appearance-none
-      block
-      w-full
-      px-3
-      py-1.5
-      text-base
-      font-normal
-      text-gray-700
-      bg-clip-padding bg-no-repeat
-      border border-solid
-      rounded
-      transition
-      ease-in-out
-      m-0
-      focus:text-gray-700 focus:bg-white focus:outline-none"
-                  aria-label="Default select example"
+                  className="form-select appearance-none block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-clip-padding bg-no-repeat border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:outline-none"
+                  value={values.category}
                 >
                   <option value="Cars">Cars</option>
                   <option value="Education">Education</option>

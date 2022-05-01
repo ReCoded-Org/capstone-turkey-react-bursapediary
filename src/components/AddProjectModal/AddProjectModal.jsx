@@ -14,7 +14,7 @@ function AddProjectModal() {
         <div className="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-md outline-none text-current">
           <div className="modal-header flex flex-shrink-0 items-center justify-between p-4 border-b border-gray-200 rounded-t-md">
             <h5
-              className="text-xl font-medium leading-normal text-gray-800"
+              className="text-xl font-medium leading-normal"
               id="exampleModalScrollableLabel"
             >
               Add Project
