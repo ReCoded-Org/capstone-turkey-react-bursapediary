@@ -94,7 +94,7 @@ export default function SelectedProject() {
                   <AiOutlineUser className="w-4 h-4 mr-2" />
                   <div key={e._id}>
                     <h1 className="font-semibold mb-3">
-                      {user.username} donated $100
+                      {user?.username} donated $100
                     </h1>
                     <h1 className="mb-3">{e.content}</h1>
                     <h1>
