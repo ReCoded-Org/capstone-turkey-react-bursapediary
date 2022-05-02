@@ -37,9 +37,9 @@ const MOCKED_PROJECTS = [
   {
     id: 4,
     image: FeaturedProjectImg4,
-    title: 'Support Ukraine',
+    title: 'Support tech startup',
     description:
-      'As the attacks continue on the Ukrainian people, its people are in need of ongoing supplies and support to defend their country.',
+      'As new startup, we are dealing with the hard economic conditions. You can see our product which is designed for blind people and support us in our journey.',
   },
   {
     id: 5,
