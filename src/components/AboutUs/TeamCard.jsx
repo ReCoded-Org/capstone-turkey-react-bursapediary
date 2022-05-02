@@ -1,6 +1,6 @@
 import { BsGithub } from 'react-icons/bs';
 import { FaLinkedinIn } from 'react-icons/fa';
-
+import { useTranslation } from 'react-i18next';
 import Maher from '../../assets/images/Maher.png';
 import Kutay from '../../assets/images/Kutay.png';
 import Akin from '../../assets/images/Akin.png';
@@ -10,11 +10,14 @@ import Ozer from '../../assets/images/Ozer.png';
 import Teoman from '../../assets/images/Teoman.png';
 
 function TeamCard() {
+  const { t } = useTranslation();
   return (
     <div className="my-4 py-8 bg-main" data-testid="teamcard-component">
-      <h1 className="text-5xl text-center mb-10 xsnav:text-4xl">Our Team</h1>
+      <h1 className="text-5xl text-center mb-10 xsnav:text-4xl">
+        {t('aboutUs.title3')}
+      </h1>
       <p className="text-3xl text-center mb-20 mdnav:text-2xl smnav:text-xl xsnav:text-xl">
-        Meet the people behind the idea
+        {t('aboutUs.info3')}
       </p>
       <div className="flex flex-wrap justify-center mr-8 ml-8 mb-16">
         <div className="w-48 -mr-4 z-50 mb-4 ">

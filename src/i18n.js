@@ -45,6 +45,7 @@ i18n
             faq: 'FAQ',
             about: 'About',
             contact: 'Contact',
+            add: 'Add Project',
           },
           auth: {
             signup: 'Sign Up',
@@ -133,6 +134,19 @@ i18n
               a1: 'If your charity is based in the Turkey, there is nothing you need to do to send funds over, we automatically transfer donations to the chosen charity on a weekly basis. If you donated money to a charity outside the Turkey, donations are sent bi-weekly, monthly or quarterly depending on where they are based on.',
             },
           },
+          aboutUs: {
+            title1: 'About Us',
+            info1:
+              ' We are a team of builders helping people reach their dreams while others support them.',
+            title2: 'Our Story',
+            info2:
+              ' In the React Web Development Bootcamp offered by Re:Coded, we decided to build something meaninful in a way that it makes impact in lives of people.',
+            title3: 'Our Team',
+            info3: 'Meet the people behind the idea.',
+          },
+          projects: {
+            title: ' Find a charity or project to support',
+          },
         },
       },
       tr: {
@@ -165,6 +179,7 @@ i18n
             faq: 'SSS',
             about: 'Hakkımızda',
             contact: 'İletişim',
+            add: 'Proje Ekle',
           },
           auth: {
             signup: 'Kayıt Ol',
@@ -253,6 +268,19 @@ i18n
               q1: 'Bağışlar, hayır kurumlarına veya bireylere nasıl aktarılır?              ',
               a1: 'Hayır kurumunuz Türkiye merkezliyse, para göndermek için yapmanız gereken bir şey yok, bağışları otomatik olarak haftalık olarak seçilen hayır kurumuna aktarıyoruz. Türkiye dışındaki bir hayır kurumuna bağışta bulunduysanız, bağışlar bulundukları yere göre iki haftada bir, ayda bir veya üç ayda bir gönderilir.',
             },
+          },
+          aboutUs: {
+            title1: 'Hakkımızda',
+            info1:
+              'Başkaları onları desteklerken, insanların hayallerine ulaşmalarına yardımcı olmayı amaç edinen bir ekibiz.',
+            title2: 'Hikayemiz',
+            info2:
+              'Re:Coded tarafından organize edilen React Web Geliştirme Eğitim Kampında, insanların yaşamlarında etki yaratacak şekilde anlamlı bir şey inşa etmeye karar verdik.',
+            title3: 'Takımımız',
+            info3: 'Fikrin arkasındaki takım ile tanış.',
+          },
+          projects: {
+            title: 'Destekleyeceğin bir hayır kurumu veya bir proje bul',
           },
         },
       },

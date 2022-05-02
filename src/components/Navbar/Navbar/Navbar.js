@@ -131,7 +131,7 @@ function Navbar() {
                 data-bs-toggle="modal"
                 data-bs-target="#ModalCenter"
               >
-                Add Project
+                {t('navbar.add')}
                 <AiOutlinePlus size={23} />
               </button>
             ) : null}

@@ -1,11 +1,14 @@
+import { useTranslation } from 'react-i18next';
+
 import TeamCard from '../../components/AboutUs/TeamCard';
 
 function AboutUs() {
+  const { t } = useTranslation();
   return (
     <div data-testid="AboutUs-Page">
       <section className="my-4 py-8 ">
         <h1 className="text-5xl text-center mb-6 xsnav:text-4xl text-primary  ">
-          About Us
+          {t('aboutUs.title1')}
         </h1>
         <div className="flex justify-center items-center">
           <img
@@ -14,17 +17,17 @@ function AboutUs() {
             className="w-40 smnav:w-28 xsnav:w-20 ml-6"
           />
           <p className="text-3xl text-center lgnav:mr-48 lgnav:ml-48 mdnav:mr-24 mdnav:ml-24 mdnav:text-2xl smnav:mr-16 smnav:ml-16 smnav:text-xl xsnav:mr-8 xsnav:ml-8 xsnav:text-xl items-center mt-auto mb-auto ">
-            We are a team of builders helping people reach their dreams while
-            others support them.
+            {t('aboutUs.info1')}
           </p>
         </div>
       </section>
       <section className="bg-secondary my-2 py-2">
-        <h1 className="text-5xl text-center my-8 xsnav:text-4xl">Our Story</h1>
+        <h1 className="text-5xl text-center my-8 xsnav:text-4xl">
+          {' '}
+          {t('aboutUs.title2')}
+        </h1>
         <p className="text-3xl text-center mb-20 lgnav:mr-48 lgnav:ml-48 mdnav:mr-24 mdnav:ml-24 mdnav:text-2xl smnav:mr-16 smnav:ml-16 smnav:text-xl xsnav:mr-8 xsnav:ml-8 xsnav:text-xl">
-          In the React Web Development Bootcamp offered by Re:Coded, we decided
-          to build something meaninful in a way that it makes impact in lives of
-          people.
+          {t('aboutUs.info2')}
         </p>
       </section>
       <section>
