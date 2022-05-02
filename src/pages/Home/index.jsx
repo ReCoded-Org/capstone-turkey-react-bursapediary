@@ -6,6 +6,7 @@ import {
   FeaturedProjects,
   ProjectCard,
   Slider,
+  AboutUs,
 } from './components';
 import { MOCKED_PROJECTS } from './data/index';
 
@@ -47,6 +48,7 @@ function Home() {
         ))}
       </FeaturedProjects>
       <Slider items={reviews} />
+      <AboutUs />
     </div>
   );
 }
