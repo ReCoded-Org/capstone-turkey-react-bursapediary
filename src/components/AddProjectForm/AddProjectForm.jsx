@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { Formik, ErrorMessage } from 'formik';
+import { toast } from 'react-toastify';
 import * as Yup from 'yup';
 import { useSelector } from 'react-redux';
 
@@ -16,11 +17,17 @@ function AddProjectForm() {
           owners: [currentUser.id],
           categories: [values.category],
         };
-        axios.post('https://bursapediary.com/projects', project, {
-          headers: {
-            authorization: currentUser.token,
-          },
-        });
+        axios
+          .post('https://bursapediary.com/projects', project, {
+            headers: {
+              authorization: currentUser.token,
+            },
+          })
+          .then((res) => {
+            toast.success(res.data, {
+              position: toast.POSITION.TOP_RIGHT,
+            });
+          });
 
         setSubmitting(false);
       }}
