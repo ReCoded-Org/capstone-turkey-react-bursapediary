@@ -1,6 +1,7 @@
-import { AiOutlineGlobal } from 'react-icons/ai';
+import { AiOutlineGlobal, AiOutlinePlus } from 'react-icons/ai';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
+
 import LanguageDropdown from '../LanguageDropdown/LanguageDropdown';
 import {
   HOME_ROUTE,
@@ -13,6 +14,7 @@ import {
 } from '../../../routes';
 
 import { logout } from '../../../features/user/userAPI';
+import AddProjectModal from '../../AddProjectModal/AddProjectModal';
 
 function Navbar() {
   const dispatch = useDispatch();
@@ -27,7 +29,7 @@ function Navbar() {
   return (
     <header>
       <nav
-        className="navbar navbar-expand-md shadow-md py-2 bg-bgmain relative flex items-center w-full justify-between mb-5"
+        className="navbar navbar-expand-md shadow-md py-2 bg-bgmain relative flex items-center w-full justify-between"
         data-testid="valid-navigation"
       >
         <div className="px-6 w-full flex flex-wrap items-center justify-between">
@@ -120,7 +122,17 @@ function Navbar() {
                 </Link>
               </li>
             </ul>
-
+            {user ? (
+              <button
+                type="button"
+                className="m-auto pr-5 flex gap gap-1 nav-link block pl-2 pr-4 lgnav:px-2 py-2 text-white bg-primary rounded border border-black  font-semibold transition duration-150 ease-in-out hover:shadow-2xl hover:scale-110 xsnav:text-sm "
+                data-bs-toggle="modal"
+                data-bs-target="#ModalCenter"
+              >
+                Add Project
+                <AiOutlinePlus size={23} />
+              </button>
+            ) : null}
             <ul className="navbar-nav lgnav:flex lgnav:flex-row flex flex-nowrap mdnav:flex-row smnav:flex-row ml-1 smnav:mt-6 xsnav:mt-6 smnav:justify-center xsnav:justify-center">
               {user ? (
                 <li className="nav-item mb-2 pr-2 lgnav:mb-0">
@@ -176,6 +188,7 @@ function Navbar() {
           </div>
         </div>
       </nav>
+      <AddProjectModal />
     </header>
   );
 }
