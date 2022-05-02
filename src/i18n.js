@@ -106,6 +106,33 @@ i18n
             confirmPassword: 'Confirm Password',
             alreadyHave: ' Already have an account?',
           },
+          faq: {
+            title: 'Frequently Asked Questions',
+            subText1:
+              'We have gathered the most common question we get regarding',
+            subText2: "Bursapediary FAQ and it' s features.",
+          },
+          accordions: {
+            general: {
+              title: 'General',
+              q1: 'Can I trust Bursapediary?',
+              a1: 'Yes. Bursapediary has enabled fundraising support for charities and individuals since 2021. Please feel free to contact any of our partner charities or individuals for their experience of our service. Bursapediary provides an extra layer of security and trust by managing all donations on the Bursapediary platform.',
+              q2: 'Can I make anonymous donations?',
+              a2: 'On a charity or fundraise project donation page, donors can now opt to give anonymously without their details being visible to the charity or fundraiser (they’ll still be required to provide their details to Bursapediary), or they may choose to provide the charity with their details as before. If the donor has selected the anonymous option, the donation notifications and donor reports will display the donation as “Anonymous”.',
+              q3: 'Bursapediary hayır kurumlarına veya bireylere herhangi bir fon sağlıyor mu?',
+              a3: 'No. The Bursapediary Foundation does not offer any form of financial support, loans or grants to charities or individuals. Bursapediary provides a secure, online donation processing and fundraising service globally to charities and fundraisers who wish to fundraise for these charities.',
+            },
+            register: {
+              title: 'Register',
+              q1: 'How do I change my password if I forget it?',
+              a1: 'When logging in, enter your email address and click on ‘Forgot your password?’, we’ll send you an email with a prompt to reset it. Not getting our emails? Check your junk or spam folders, as well as adding hello@bursapediary.com to your safe sender list, this should take care of the problem.',
+            },
+            technical: {
+              title: 'Technical',
+              q1: 'How are donations transferred to the charity or individuals?',
+              a1: 'If your charity is based in the Turkey, there is nothing you need to do to send funds over, we automatically transfer donations to the chosen charity on a weekly basis. If you donated money to a charity outside the Turkey, donations are sent bi-weekly, monthly or quarterly depending on where they are based on.',
+            },
+          },
         },
       },
       tr: {
@@ -124,7 +151,7 @@ i18n
             donateNow: 'Şimdi Bağış Yap',
             reviews: {
               0: '"Fonlar 10 genç kız için eğitim masraflarını destekledi. Bursapediary sayesinde kızlar hayallerinin peşinden gittiler."',
-              1: '"Dijital girişimciliğim için yapolan bağışlar bir işe başlamama yardımcı oldu. Teşekkürler Bursapediary!"',
+              1: '"Dijital girişimciliğim için yapılan bağışlar bir işe başlamama yardımcı oldu. Teşekkürler Bursapediary!"',
               2: '"Orman yangını için yapılan bağışlar ormanı daha az hasarla kurtarmamıza yardımcı oldu."',
             },
           },
@@ -194,11 +221,38 @@ i18n
             confirmPasswordReq: '*Doğrulama şifresi gerekli',
             emailInvalid: '*Mail geçersiz formatta',
             passwordMatch: '*Şifreler eşleşmeli',
-            userName: 'Kullanıcı ismi',
+            username: 'Kullanıcı ismi',
             password: 'Şifre',
             email: 'Mail Adresi',
             confirmPassword: 'Onay Şifresi',
             alreadyHave: 'Zaten bir hesabın var mı?',
+          },
+          faq: {
+            title: 'Sık Sorulan Sorular',
+            subText1:
+              'Bursapediary ve platformun nasıl kullanıldığı hakkındaki',
+            subText2: 'sık sorulan soruları bir araya getirdik',
+          },
+          accordions: {
+            general: {
+              title: 'Genel',
+              q1: 'Bursapediary güvebilir mi?',
+              a1: "Evet. Bursapediary, 2021'den beri hayır kurumları ve bireyler için bağış toplama desteği sağlamıştır. Hizmetimizle ilgili deneyimleri için lütfen ortak hayır kurumları veya bireylerden herhangi biriyle iletişime geçmekten çekinmeyin. Bursapediary, tüm bağışları Bursapediary platformunda yöneterek ekstra bir güvenlik ve güven katmanı sağlar.",
+              q2: 'Anonim olarak bağış yapabilir miyim?',
+              a2: "Bir hayır kurumu veya bağış toplama projesi bağış sayfasında, bağışçılar artık ayrıntıları hayır kurumu veya bağış toplayıcı tarafından görülmeden anonim olarak bağışta bulunmayı seçebilir (ayrıntılarını yine de Bursapediary'ye vermeleri gerekecektir) veya hayır kurumuna şu bilgileri sunmayı seçebilirler: onların detayları daha önce olduğu gibi. Bağışçı anonim seçeneğini seçtiyse, bağış bildirimleri ve bağış raporları, bağışı “Anonim” olarak gösterecektir.",
+              q3: 'Bursapediary hayır kurumlarına veya bireylere herhangi bir fon sağlıyor mu?',
+              a3: 'Hayır. Bursapediary Vakfı, hayır kurumlarına veya bireylere hiçbir şekilde mali destek, kredi veya hibe sunmamaktadır. Bursapediary, bu hayır kurumları için bağış toplamak isteyen hayır kurumlarına ve bağış toplayıcılara dünya çapında güvenli, çevrimiçi bağış işleme ve bağış toplama hizmeti sunmaktadır.',
+            },
+            register: {
+              title: 'Kayıt',
+              q1: 'Şifremi unuttum, nasıl yenileyebilirim?',
+              a1: "Giriş yaparken, e-posta adresinizi girin ve 'Şifrenizi mi unuttunuz?' seçeneğini tıklayın, size sıfırlamanız için bir e-posta göndereceğiz. E-postalarımızı almıyor musunuz? Önemsiz veya spam klasörlerinizi kontrol edin ve hello@bursapediary.com'u güvenli gönderenler listenize ekleyin, bu sorunu çözecektir.",
+            },
+            technical: {
+              title: 'Teknik',
+              q1: 'Bağışlar, hayır kurumlarına veya bireylere nasıl aktarılır?              ',
+              a1: 'Hayır kurumunuz Türkiye merkezliyse, para göndermek için yapmanız gereken bir şey yok, bağışları otomatik olarak haftalık olarak seçilen hayır kurumuna aktarıyoruz. Türkiye dışındaki bir hayır kurumuna bağışta bulunduysanız, bağışlar bulundukları yere göre iki haftada bir, ayda bir veya üç ayda bir gönderilir.',
+            },
           },
         },
       },
