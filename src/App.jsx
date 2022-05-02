@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import Navbar from './components/Navbar/Navbar/Navbar';
 import Home from './pages/Home';
 import Footer from './components/Footer/Footer';
+import AboutUs from './pages/AboutUs/AboutUs';
 import SignUpPage from './pages/SignUpPage/SignUpPage';
 import SignInPage from './pages/SignInPage/SignInPage';
 import ProjectsPage from './pages/ProjectsPage/ProjectsPage';
@@ -14,6 +15,7 @@ import {
   SIGN_UP_ROUTE,
   SIGN_IN_ROUTE,
   HOME_ROUTE,
+  ABOUT_ROUTE,
   FAQ_ROUTE,
   CONTACT_ROUTE,
   PROJECT_ROUTE,
@@ -26,6 +28,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path={HOME_ROUTE} element={<Home />} />
+        <Route path={ABOUT_ROUTE} element={<AboutUs />} />
         <Route path={FAQ_ROUTE} element={<FaqPage />} />
         <Route path={CONTACT_ROUTE} element={<ContactUs />} />
         <Route
