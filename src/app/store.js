@@ -13,6 +13,10 @@ import {
 
 import storage from 'redux-persist/lib/storage';
 import userReducer from '../features/user/userSlice';
+import projectsReducer from '../features/projects/projectsSlice';
+import categoryReducer from '../features/projects/categorySlice';
+import selectedProjectDetailsReducer from '../features/projects/selectedProjectSlice';
+import reviewReducer from '../features/projects/reviewSlice';
 
 const persistConfig = {
   key: 'root',
@@ -22,6 +26,10 @@ const persistConfig = {
 
 const rootReducer = combineReducers({
   user: userReducer,
+  projects: projectsReducer,
+  category: categoryReducer,
+  selectedProjectDetails: selectedProjectDetailsReducer,
+  review: reviewReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

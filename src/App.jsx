@@ -5,9 +5,10 @@ import Navbar from './components/Navbar/Navbar/Navbar';
 import Home from './pages/Home';
 import Footer from './components/Footer/Footer';
 import AboutUs from './pages/AboutUs/AboutUs';
-
 import SignUpPage from './pages/SignUpPage/SignUpPage';
 import SignInPage from './pages/SignInPage/SignInPage';
+import ProjectsPage from './pages/ProjectsPage/ProjectsPage';
+import SelectedProject from './features/projects/SelectedProject';
 import FaqPage from './pages/FAQ/FaqPage';
 import ContactUs from './pages/ContactUsPage/ContactUs';
 import {
@@ -17,6 +18,7 @@ import {
   ABOUT_ROUTE,
   FAQ_ROUTE,
   CONTACT_ROUTE,
+  PROJECT_ROUTE,
 } from './routes';
 
 function App() {
@@ -37,6 +39,8 @@ function App() {
           path={SIGN_IN_ROUTE}
           element={currentUser ? <Navigate to={HOME_ROUTE} /> : <SignInPage />}
         />
+        <Route path={PROJECT_ROUTE} element={<ProjectsPage />} />
+        <Route path="/project/:id" element={<SelectedProject />} />
       </Routes>
       <Footer />
     </div>
