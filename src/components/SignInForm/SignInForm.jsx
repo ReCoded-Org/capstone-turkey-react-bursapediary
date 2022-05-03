@@ -1,10 +1,12 @@
 import { Formik, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { useDispatch } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 
 import { login } from '../../features/user/userAPI';
 
 function SignInForm() {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
   return (
     <Formik
@@ -14,8 +16,8 @@ function SignInForm() {
       }}
       initialValues={{ username: '', password: '' }}
       validationSchema={Yup.object().shape({
-        username: Yup.string().required('*Username is required'),
-        password: Yup.string().required('*Password is required'),
+        username: Yup.string().required(t('authForms.usernameRequired')),
+        password: Yup.string().required(t('authForms.passwordRequired')),
       })}
     >
       {({ values, isSubmitting, handleChange, handleBlur, handleSubmit }) => {
@@ -26,7 +28,7 @@ function SignInForm() {
                 className="block text-[#6A2C70] text-md font-bold mb-2"
                 htmlFor="username"
               >
-                Username
+                {t('authForms.username')}
                 <input
                   className="leading-tight border-1 shadow appearance-none border rounded w-full py-2 px-3  text-gray-700 outline outline-1 focus:shadow-outline"
                   id="username"
@@ -48,7 +50,7 @@ function SignInForm() {
                 className="block text-[#6A2C70] text-md font-bold mb-4"
                 htmlFor="password"
               >
-                Password
+                {t('authForms.password')}
                 <input
                   className="leading-tight shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 outline outline-1  focus:shadow-outline"
                   id="password"
@@ -71,7 +73,7 @@ function SignInForm() {
                 type="submit"
                 disabled={isSubmitting}
               >
-                Login
+                {t('auth.signin')}
               </button>
             </div>
           </form>

@@ -1,7 +1,14 @@
-import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 function LanguageDropdown() {
-  const [language, setLanguage] = useState('English');
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
+
+  const selectedLanguage =
+    i18n.resolvedLanguage === 'en' ? 'English' : 'Türkçe';
 
   return (
     <div className="dropdown relative ">
@@ -35,7 +42,7 @@ function LanguageDropdown() {
         aria-expanded="false"
         data-testid="dropdown-menu"
       >
-        {language}
+        {selectedLanguage}
         <svg
           aria-hidden="true"
           focusable="false"
@@ -90,10 +97,10 @@ function LanguageDropdown() {
                         active:bg-bgmain
                         "
           href="#turkish"
-          onClick={() => setLanguage('Turkish')}
+          onClick={() => changeLanguage('tr')}
           type="button"
         >
-          Turkish
+          {t('languages.tr')}
         </button>
         <button
           className="
@@ -111,10 +118,10 @@ function LanguageDropdown() {
                         active:bg-bgmain
                         "
           href="#english"
-          onClick={() => setLanguage('English')}
+          onClick={() => changeLanguage('en')}
           type="button"
         >
-          English
+          {t('languages.en')}
         </button>
       </ul>
     </div>

@@ -1,47 +1,52 @@
-import FeaturedProjectImg from '../../../assets/images/featuredProjectImg.png';
+import FeaturedProjectImg from '../../../assets/images/FeaturedProjectImg.jpeg';
+import FeaturedProjectImg1 from '../../../assets/images/FeaturedProjectImg1.jpeg';
+import FeaturedProjectImg2 from '../../../assets/images/FeaturedProjectImg2.jpeg';
+import FeaturedProjectImg3 from '../../../assets/images/FeaturedProjectImg3.jpeg';
+import FeaturedProjectImg4 from '../../../assets/images/FeaturedProjectImg4.jpeg';
+import FeaturedProjectImg5 from '../../../assets/images/FeaturedProjectImg5.jpeg';
 
 const MOCKED_PROJECTS = [
   {
     id: 0,
     image: FeaturedProjectImg,
-    title: 'Raise money for charity',
+    title: 'College education for 10 talented students',
     description:
-      'Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum',
+      'Our goal is to educate youngs who display talents, intelligence and determination to pursue higher education but who are not able to afford their studies',
   },
   {
     id: 1,
-    image: FeaturedProjectImg,
-    title: 'Raise money for charity',
+    image: FeaturedProjectImg1,
+    title: 'Educate a Girl, Educate a Nation',
     description:
-      'Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum',
+      'Girls are still more likely than boys to never set foot in a classroom, despite the tremendous progress made over the past 20 years.',
   },
   {
     id: 2,
-    image: FeaturedProjectImg,
-    title: 'Raise money for charity',
+    image: FeaturedProjectImg2,
+    title: 'Protect Coral Reefs in Malaysia',
     description:
-      'Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum',
+      'We want to address the threats to coral reefs and the marine ecosystem before irreversible damages occur.',
   },
   {
     id: 3,
-    image: FeaturedProjectImg,
-    title: 'Raise money for charity',
+    image: FeaturedProjectImg3,
+    title: 'Girls in Tech',
     description:
-      'Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum',
+      ' We would like to train girls as young as possible to give them a chance in a very male oriented sector while it should be open to all.',
   },
   {
     id: 4,
-    image: FeaturedProjectImg,
-    title: 'Raise money for charity',
+    image: FeaturedProjectImg4,
+    title: 'Support tech startup',
     description:
-      'Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum',
+      'As new startup, we are dealing with the hard economic conditions. You can see our product which is designed for blind people and support us in our journey.',
   },
   {
     id: 5,
-    image: FeaturedProjectImg,
-    title: 'Raise money for charity',
+    image: FeaturedProjectImg5,
+    title: 'Empower 100 Girls in NYC',
     description:
-      'Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum',
+      'Primary goal is for each of young woman of color in our program to develop the foundational academic, social and leadership skills to achieve her dreams.',
   },
 ];
 
@@ -49,20 +54,20 @@ const MOCKED_REVIEWS = [
   {
     id: 0,
     review:
-      '"I\'m a testimonial. Click to edit me and add text that says something nice about you and your services."',
+      '"The funds supported education costs for 10 young girl. Thanks to Bursapediary, girls followed their dreams"',
     clientName: 'Cristina Watts',
   },
   {
     id: 1,
     review:
-      '"I\'m second testimonial. Click to edit me and add text that says something nice about you and your services."',
-    clientName: 'Josh Watts',
+      '"The donations for my digital entrepreneurship helped me start a business. Thanks Bursapediary!"',
+    clientName: 'Ahmet Demir',
   },
   {
     id: 2,
     review:
-      '"I\'m third testimonial. Click to edit me and add text that says something nice about you and your services."',
-    clientName: 'Alex Turner',
+      '"The donations for the forest fire helped us to recover the forest with less damage."',
+    clientName: 'Josh Turner',
   },
 ];
 

@@ -10,7 +10,7 @@ function Transation({ mainText, subText }) {
         {mainText}
       </p>
       {subText ? (
-        <p className="text-sm px-10 mt-10 sm:mt-0">{subText}</p>
+        <p className="text-base px-10 mt-10 sm:mt-0">{subText}</p>
       ) : null}
     </div>
   );

@@ -8,9 +8,11 @@ import 'tw-elements';
 
 import App from './App';
 import { store, persistor } from './app/store';
-// required to work properly within the App
 import './index.css';
-import 'react-toastify/dist/ReactToastify.css';
+import 'react-toastify/dist/ReactToastify.css'; // required to work properly within the App
+
+// import i18n (needs to be bundled)
+import './i18n';
 
 ReactDOM.render(
   <React.StrictMode>

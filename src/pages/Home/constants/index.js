@@ -1,12 +1,12 @@
 export const HOME_PAGE_TITLE = 'Dreams Will Come True';
 
 export const HOME_INFORMATION_TEXT =
-  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minimveniam consequat.';
+  'If you have dreams, Bursapediary is a right place for you. Find the support you need for your dreams with Bursapediary. If you are a supporter, meet with the dreamers and help their dreams to come true.';
 
 export const TRANSATION_MAIN_TEXT =
-  'With the Right Organization, You Can Give A Hand True Needer';
+  'With the right organization, you can give a hand true needer';
 
 export const TRANSATION_SUB_TEXT =
-  "I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a little more about you.";
+  'Bursapediary makes it easy and safe for you to give support to local projects anywhere in the world, while providing nonprofits and individuals with the tools, training, and support they need to thrive.';
 
 export const HOME_ACTION_BUTTON_TEXT = "Let's Get Started";

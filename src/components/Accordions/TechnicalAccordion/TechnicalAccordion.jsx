@@ -1,4 +1,7 @@
+import { useTranslation } from 'react-i18next';
+
 function TechnicalAccordion() {
+  const { t } = useTranslation();
   return (
     <div
       className="accordion w-2/3 text-left mt-10"
@@ -25,7 +28,7 @@ function TechnicalAccordion() {
           className="text-2xl font-semibold p-2"
           data-testid="valid-technicalAccordionTitle"
         >
-          Technical
+          {t('accordions.technical.title')}
         </p>
       </div>
 
@@ -53,7 +56,7 @@ function TechnicalAccordion() {
             aria-expanded="true"
             aria-controls="collapseOne1"
           >
-            Lorem ipsum dolor sit amet 1... ?
+            {t('accordions.technical.q1')}
           </button>
         </h2>
         <div
@@ -63,105 +66,7 @@ function TechnicalAccordion() {
           data-bs-parent="#accordionExample2"
         >
           <div className="accordion-body py-4 px-5 bg-[#FEEEEE]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum
-          </div>
-        </div>
-      </div>
-      <div className="accordion-item bg-white border-b-2 border-pink-200">
-        <h2 className="accordion-header mb-0" id="headingTwo">
-          <button
-            className="
-              accordion-button
-              collapsed
-              relative
-              flex
-              items-center
-              w-full
-              py-4
-              px-5
-              font-semibold
-              text-base text-[#6A2C70] text-left
-              bg-[#FEEEEE]
-              rounded-none
-              transition
-              focus:outline-none
-            "
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapseTwo2"
-            aria-expanded="false"
-            aria-controls="collapseTwo2"
-          >
-            Lorem ipsum dolor sit amet 2... ?
-          </button>
-        </h2>
-        <div
-          id="collapseTwo2"
-          className="accordion-collapse collapse show"
-          aria-labelledby="headingTwo"
-          data-bs-parent="#accordionExample2"
-        >
-          <div className="accordion-body py-4 px-5 bg-[#FEEEEE]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum
-          </div>
-        </div>
-      </div>
-      <div className="accordion-item bg-white border-b-2 border-pink-200">
-        <h2 className="accordion-header mb-0" id="headingThree">
-          <button
-            className="
-              accordion-button
-              collapsed
-              relative
-              flex
-              items-center
-              w-full
-              py-4
-              px-5
-              font-semibold
-              text-base 
-              text-[#6A2C70] 
-              text-left
-              bg-[#FEEEEE]
-              rounded-none
-              transition
-              focus:outline-none
-            "
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapseThree1"
-            aria-expanded="false"
-            aria-controls="collapseThree1"
-          >
-            Lorem ipsum dolor sit amet 3... ?
-          </button>
-        </h2>
-        <div
-          id="collapseThree1"
-          className="accordion-collapse collapse"
-          aria-labelledby="headingThree"
-          data-bs-parent="#accordionExample2"
-        >
-          <div className="accordion-body py-4 px-5 bg-[#FEEEEE]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum
+            {t('accordions.technical.a1')}
           </div>
         </div>
       </div>

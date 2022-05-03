@@ -1,6 +1,7 @@
 import { AiOutlineGlobal, AiOutlinePlus } from 'react-icons/ai';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 import LanguageDropdown from '../LanguageDropdown/LanguageDropdown';
 import {
@@ -17,6 +18,7 @@ import { logout } from '../../../features/user/userAPI';
 import AddProjectModal from '../../AddProjectModal/AddProjectModal';
 
 function Navbar() {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user.currentUser);
 
@@ -78,7 +80,7 @@ function Navbar() {
                   data-mdb-ripple="true"
                   data-mdb-ripple-color="light"
                 >
-                  Home
+                  {t('navbar.home')}
                 </Link>
               </li>
               <li className="nav-item">
@@ -88,7 +90,7 @@ function Navbar() {
                   data-mdb-ripple="true"
                   data-mdb-ripple-color="light"
                 >
-                  Projects
+                  {t('navbar.projects')}
                 </Link>
               </li>
               <li className="nav-item">
@@ -98,7 +100,7 @@ function Navbar() {
                   data-mdb-ripple="true"
                   data-mdb-ripple-color="light"
                 >
-                  FAQ
+                  {t('navbar.faq')}
                 </Link>
               </li>
               <li className="nav-item ">
@@ -108,7 +110,7 @@ function Navbar() {
                   data-mdb-ripple="true"
                   data-mdb-ripple-color="light"
                 >
-                  About
+                  {t('navbar.about')}
                 </Link>
               </li>
               <li className="nav-item">
@@ -118,18 +120,18 @@ function Navbar() {
                   data-mdb-ripple="true"
                   data-mdb-ripple-color="light"
                 >
-                  Contact
+                  {t('navbar.contact')}
                 </Link>
               </li>
             </ul>
             {user ? (
               <button
                 type="button"
-                className="m-auto pr-5 flex gap gap-1 nav-link block pl-2 pr-4 lgnav:px-2 py-2 text-white bg-primary rounded border border-black  font-semibold transition duration-150 ease-in-out hover:shadow-2xl hover:scale-110 xsnav:text-sm "
+                className="m-auto pr-5 flex gap gap-1 nav-link  pl-2  lgnav:px-2 py-2 text-white bg-primary rounded border border-black  font-semibold transition duration-150 ease-in-out hover:shadow-2xl hover:scale-110 xsnav:text-sm "
                 data-bs-toggle="modal"
                 data-bs-target="#ModalCenter"
               >
-                Add Project
+                {t('navbar.add')}
                 <AiOutlinePlus size={23} />
               </button>
             ) : null}
@@ -145,7 +147,7 @@ function Navbar() {
                       type="button"
                       onClick={() => signOut()}
                     >
-                      Sign Out
+                      {t('auth.signout')}
                     </button>
                   </div>
                 </li>
@@ -159,7 +161,7 @@ function Navbar() {
                         data-mdb-ripple-color="light"
                         type="button"
                       >
-                        Sign Up
+                        {t('auth.signup')}
                       </button>
                     </Link>
                   </li>
@@ -171,7 +173,7 @@ function Navbar() {
                         data-mdb-ripple-color="light"
                         type="button"
                       >
-                        Sign In
+                        {t('auth.signin')}
                       </button>
                     </Link>
                   </li>

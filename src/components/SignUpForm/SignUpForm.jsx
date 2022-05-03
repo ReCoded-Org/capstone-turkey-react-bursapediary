@@ -3,11 +3,14 @@ import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 
 import { register } from '../../features/user/userAPI';
 import { SIGN_IN_ROUTE } from '../../routes';
 
 function SignUpForm() {
+  const { t } = useTranslation();
+
   const dispatch = useDispatch();
   const { isSuccessRegister, currentUser } = useSelector((state) => state.user);
   const navigate = useNavigate();
@@ -30,17 +33,17 @@ function SignUpForm() {
       }}
       validationSchema={Yup.object().shape({
         email: Yup.string()
-          .email('*Email is invalid')
-          .required('*Email is required'),
-        password: Yup.string().required('*Password is required'),
-        username: Yup.string().required('*Username is required'),
+          .email(t('authForms.emailInvalid'))
+          .required(t('authForms.emailRequired')),
+        password: Yup.string().required(t('authForms.passwordRequired')),
+        username: Yup.string().required(t('authForms.usernameRequired')),
         confirmPassword: Yup.string()
-          .required('*Confirm password is required')
+          .required(t('authForms.confirmPasswordReq'))
           .when('password', {
             is: (val) => !!(val && val.length > 0),
             then: Yup.string().oneOf(
               [Yup.ref('password')],
-              '*Passwords must be same',
+              t('authForms.passwordMatch'),
             ),
           }),
       })}
@@ -53,7 +56,7 @@ function SignUpForm() {
                 className="block text-[#6A2C70] text-md font-bold mb-2"
                 htmlFor="username"
               >
-                Username
+                {t('authForms.username')}
                 <input
                   className="leading-tight border-1 shadow appearance-none border rounded w-full py-2 px-3  text-gray-700 outline outline-1 focus:shadow-outline"
                   id="username"
@@ -74,7 +77,7 @@ function SignUpForm() {
                 className="block text-[#6A2C70] text-md font-bold mb-2"
                 htmlFor="email"
               >
-                Email
+                {t('authForms.email')}
                 <input
                   className="leading-tight border-1 shadow appearance-none border rounded w-full py-2 px-3  text-gray-700 outline outline-1 focus:shadow-outline"
                   id="email"
@@ -95,7 +98,7 @@ function SignUpForm() {
                 className="block text-[#6A2C70] text-md font-bold mb-4"
                 htmlFor="password"
               >
-                Password
+                {t('authForms.password')}
                 <input
                   className="leading-tight shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 outline outline-1  focus:shadow-outline"
                   id="password"
@@ -116,7 +119,7 @@ function SignUpForm() {
                 className="block text-[#6A2C70] text-md font-bold mb-4"
                 htmlFor="confirmPassword"
               >
-                Confirm Password
+                {t('authForms.confirmPassword')}
                 <input
                   className="leading-tight shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 outline outline-1  focus:shadow-outline"
                   id="confirmPassword"
@@ -138,14 +141,14 @@ function SignUpForm() {
                 type="submit"
                 disabled={isSubmitting}
               >
-                Sign Up
+                {t('auth.signup')}
               </button>
             </div>
             <div className="mb-8 text-center pt-2">
               <a className="text-sm" href="/login">
-                Already have an account?
+                {t('authForms.alreadyHave')}
                 <p className="text-[#0038FF] font-bold inline-block pl-1">
-                  Login
+                  {t('auth.signin')}
                 </p>
               </a>
             </div>
