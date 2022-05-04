@@ -1,6 +1,6 @@
 import { Formik, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
@@ -145,12 +145,12 @@ function SignUpForm() {
               </button>
             </div>
             <div className="mb-8 text-center pt-2">
-              <a className="text-sm" href="/login">
+              <Link className="text-sm" to="/signin">
                 {t('authForms.alreadyHave')}
                 <p className="text-[#0038FF] font-bold inline-block pl-1">
                   {t('auth.signin')}
                 </p>
-              </a>
+              </Link>
             </div>
           </form>
         );

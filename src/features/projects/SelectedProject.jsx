@@ -49,7 +49,7 @@ export default function SelectedProject() {
           <div className="flex flex-row mt-2">
             <AiFillHeart className="w-4 h-4 mr-2 mt-1" />
             <h1 className="mb-2">
-              Project Owner Name is organizing this fundraiser
+              Frontend Team is organizing this fundraiser
             </h1>
           </div>
 
@@ -62,13 +62,13 @@ export default function SelectedProject() {
               .slice(0, 16)}
           </h1>
           <h1 className="mb-4">{selectedProjectDetails?.description}</h1>
-          <hr className="w-3/4 mb-2" />
-          <h1>
+          {/* <hr className="w-3/4 mb-2" /> */}
+          {/* <h1>
             This fundraiser is related to{' '}
             {selectedProjectDetails?.categories?.map((e) => {
               return <li key={e}>{e}</li>;
             })}
-          </h1>
+          </h1> */}
           <div className="flex flex-row mt-2">
             <AiFillHeart className="w-4 h-4 mr-2 mt-1" />
             <h1 className="mb-2">Organizer</h1>
@@ -77,7 +77,7 @@ export default function SelectedProject() {
           <div className="flex flex-row">
             <AiOutlineUser className="w-8 h-8 mr-3" />
             <div>
-              <h1 className="mb-2">Project Owner Name</h1>
+              <h1 className="mb-2">Frontend Team</h1>
               <button
                 type="button"
                 className="inline-block px-6 py-2.5 bg-primary hover:bg-white text-white hover:text-black border-2 border-primary hover:border-black font-medium text-xs leading-tight uppercase rounded shadow-md focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out"
@@ -112,8 +112,8 @@ export default function SelectedProject() {
         </div>
         <div className="p-5">
           <h1 className="font-bold text-2xl">
-            ${selectedProjectDetails.collectedAmount} raised of $
-            {selectedProjectDetails.amount} goal
+            {/* ${selectedProjectDetails.collectedAmount} raised of $ */}
+            $350 raised of ${selectedProjectDetails.amount} goal
           </h1>
           <h1 className="text-gray mt-2">12 people donated to this project</h1>
           <div className="flex flex-row mt-2">
@@ -146,9 +146,9 @@ export default function SelectedProject() {
           <div className="flex flex-row mt-2">
             <AiOutlineUser className="w-8 h-8 mr-3 mt-3" />
             <div>
-              <h1 className="mb-2">Marry Poppins</h1>
+              <h1 className="mb-2">James Black</h1>
               <div className="flex flex-row">
-                <h1 className="font-bold mr-2">$100</h1>
+                <h1 className="font-bold mr-2">$200</h1>
                 <AiOutlineRise className="w-5 h-5 mr-1" />
                 <h1>Top Donation</h1>
               </div>
@@ -158,9 +158,9 @@ export default function SelectedProject() {
           <div className="flex flex-row mt-2">
             <AiOutlineUser className="w-8 h-8 mr-3 mt-3" />
             <div>
-              <h1 className="mb-2">Marry Poppins</h1>
+              <h1 className="mb-2">Caroline Earl</h1>
               <div className="flex flex-row">
-                <h1 className="font-bold mr-2">$100</h1>
+                <h1 className="font-bold mr-2">$50</h1>
                 <AiFillPushpin className="w-5 h-5 mr-1" />
                 <h1>First Donation</h1>
               </div>
@@ -186,7 +186,3 @@ export default function SelectedProject() {
     )
   );
 }
-
-// SelectedProject.propTypes = {
-//   selectedProjectId: PropTypes.string.isRequired,
-// };

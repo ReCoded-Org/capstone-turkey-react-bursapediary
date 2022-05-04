@@ -16,7 +16,7 @@ function Footer() {
         className="text-center lg:text-left bg-[#6A2C70]"
         data-testid="valid-footer"
       >
-        <div className="mx-6 pt-5 text-center md:text-left">
+        <div className="mx-12 pt-5 text-center md:text-left">
           <div className="grid grid-1 md:grid-cols-3 lg:grid-cols-3 gap-12">
             <div>
               <h6
@@ -83,7 +83,12 @@ function Footer() {
               <AiFillLinkedin className="text-[#ffffff] text-3xl hover:text-[#0E76A8]" />
             </a>
 
-            <a href="http://bursapediary.com/" className="text-white p-2">
+            <a
+              href="https://github.com/ReCoded-Org/capstone-turkey-react-bursapediary"
+              target="_blank"
+              className="text-white p-2"
+              rel="noreferrer"
+            >
               <AiFillGithub className="text-[#ffffff] text-3xl hover:text-[#171515]" />
             </a>
           </div>

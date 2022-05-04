@@ -83,16 +83,18 @@ function Navbar() {
                   {t('navbar.home')}
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link
-                  to={PROJECT_ROUTE}
-                  className="nav-link block pr-2 lgnav:px-2 py-2 text-primary  font-semibold hover:text-primaryHover transition duration-150 ease-in-out smnav:text-center xsnav:text-center smnav:bg-secondary xsnav:bg-secondary"
-                  data-mdb-ripple="true"
-                  data-mdb-ripple-color="light"
-                >
-                  {t('navbar.projects')}
-                </Link>
-              </li>
+              {user ? (
+                <li className="nav-item">
+                  <Link
+                    to={PROJECT_ROUTE}
+                    className="nav-link block pr-2 lgnav:px-2 py-2 text-primary  font-semibold hover:text-primaryHover transition duration-150 ease-in-out smnav:text-center xsnav:text-center smnav:bg-secondary xsnav:bg-secondary"
+                    data-mdb-ripple="true"
+                    data-mdb-ripple-color="light"
+                  >
+                    {t('navbar.projects')}
+                  </Link>
+                </li>
+              ) : null}
               <li className="nav-item">
                 <Link
                   to={FAQ_ROUTE}

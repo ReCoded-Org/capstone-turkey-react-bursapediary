@@ -41,7 +41,11 @@ function AuthenticationModuleSpan() {
         >
           <AiFillLinkedin className="text-[#6A2C70] text-7xl hover:text-[#803886]" />
         </a>
-        <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://github.com/ReCoded-Org/capstone-turkey-react-bursapediary"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <AiFillGithub className="text-[#6A2C70] text-7xl hover:text-[#803886]" />
         </a>
       </div>
