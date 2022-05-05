@@ -37,11 +37,7 @@ function Projects() {
           ? projectDetails !== null &&
             projectDetails.map((e) => {
               return (
-                <Link
-                  key={e._id}
-                  to={`/project/${e._id}`}
-                  // onKeyDown={handleClick}
-                >
+                <Link key={e._id} to={`/project/${e._id}`}>
                   <ProjectCard
                     title={e.title}
                     image={image}

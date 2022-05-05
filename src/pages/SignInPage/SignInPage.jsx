@@ -7,7 +7,7 @@ function SignIn() {
   const { t } = useTranslation();
 
   return (
-    <div className="flex sm:grid h-100 mb-16">
+    <div className="flex sm:grid h-100">
       <div className="flex justify-center w-full sm:grid grid-cols-7 gap-2">
         <AuthenticationModuleSpan />
         <div className="col-span-3">

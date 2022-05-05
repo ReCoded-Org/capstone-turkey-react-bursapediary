@@ -120,7 +120,7 @@ i18n
               a1: 'Yes. Bursapediary has enabled fundraising support for charities and individuals since 2021. Please feel free to contact any of our partner charities or individuals for their experience of our service. Bursapediary provides an extra layer of security and trust by managing all donations on the Bursapediary platform.',
               q2: 'Can I make anonymous donations?',
               a2: 'On a charity or fundraise project donation page, donors can now opt to give anonymously without their details being visible to the charity or fundraiser (they’ll still be required to provide their details to Bursapediary), or they may choose to provide the charity with their details as before. If the donor has selected the anonymous option, the donation notifications and donor reports will display the donation as “Anonymous”.',
-              q3: 'Bursapediary hayır kurumlarına veya bireylere herhangi bir fon sağlıyor mu?',
+              q3: 'Does Bursapediary provide any funds to charities or individuals?',
               a3: 'No. The Bursapediary Foundation does not offer any form of financial support, loans or grants to charities or individuals. Bursapediary provides a secure, online donation processing and fundraising service globally to charities and fundraisers who wish to fundraise for these charities.',
             },
             register: {
@@ -251,7 +251,7 @@ i18n
           accordions: {
             general: {
               title: 'Genel',
-              q1: 'Bursapediary güvebilir mi?',
+              q1: 'Bursapediary güvenilir mi?',
               a1: "Evet. Bursapediary, 2021'den beri hayır kurumları ve bireyler için bağış toplama desteği sağlamıştır. Hizmetimizle ilgili deneyimleri için lütfen ortak hayır kurumları veya bireylerden herhangi biriyle iletişime geçmekten çekinmeyin. Bursapediary, tüm bağışları Bursapediary platformunda yöneterek ekstra bir güvenlik ve güven katmanı sağlar.",
               q2: 'Anonim olarak bağış yapabilir miyim?',
               a2: "Bir hayır kurumu veya bağış toplama projesi bağış sayfasında, bağışçılar artık ayrıntıları hayır kurumu veya bağış toplayıcı tarafından görülmeden anonim olarak bağışta bulunmayı seçebilir (ayrıntılarını yine de Bursapediary'ye vermeleri gerekecektir) veya hayır kurumuna şu bilgileri sunmayı seçebilirler: onların detayları daha önce olduğu gibi. Bağışçı anonim seçeneğini seçtiyse, bağış bildirimleri ve bağış raporları, bağışı “Anonim” olarak gösterecektir.",
