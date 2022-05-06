@@ -66,8 +66,27 @@ Bursapediary makes it easy and safe for you to give support to local projects an
 <br/>
 
 
+# Screenshots
+
+### Home Page
+
+![homepage](https://user-images.githubusercontent.com/60944453/167125404-134e5a03-62fa-4959-a76e-77ed0180832f.png)
+
+### Featured Projects Section
+
+![featured projects section](https://user-images.githubusercontent.com/60944453/167125591-eb24f110-7069-4142-9b0e-a275e6340fa3.png)
+
+### Sign Up Section
+
+![signup section](https://user-images.githubusercontent.com/60944453/167125693-0b9481c5-4626-44c8-8fee-e3bfb9a31c68.png)
 
 
+### Contact Page
+
+![contact page](https://user-images.githubusercontent.com/60944453/167125769-dc7e346b-8bdb-4477-b323-c33c6dda37e8.png)
+
+
+<br/>
   
  <!-- GETTING STARTED -->
 
